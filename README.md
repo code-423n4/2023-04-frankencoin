@@ -11,22 +11,6 @@ Ultimately, when we launch the contest, this contest repo will be made public an
 Some of the checklists in this doc are for **C4 (🐺)** and some of them are for **you as the contest sponsor (⭐️)**.
 
 ---
-
-# Contest setup
-
-## 🐺 C4: Set up repos
-- [ ] Create a new private repo named `YYYY-MM-sponsorname` using this repo as a template.
-- [ ] Rename this repo to reflect contest date (if applicable)
-- [ ] Rename contest H1 below
-- [ ] Update pot sizes
-- [ ] Fill in start and end times in contest bullets below
-- [ ] Add link to submission form in contest details below
-- [ ] Add the information from the scoping form to the "Scoping Details" section at the bottom of this readme.
-- [ ] Add matching info to the [code423n4.com public contest data here](https://github.com/code-423n4/code423n4.com/blob/main/_data/contests/contests.csv))
-- [ ] Add sponsor to this private repo with 'maintain' level access.
-- [ ] Send the sponsor contact the url for this repo to follow the instructions below and add contracts here. 
-- [ ] Delete this checklist.
-
 # Repo setup
 
 ## ⭐️ Sponsor: Add code to this repo
@@ -61,20 +45,19 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 
 ---
 
-# Sponsorname contest details
-- Total Prize Pool: XXX XXX USDC (Notion: Total award pool)
-  - HM awards: XXX XXX USDC (Notion: HM (main) pool)
-  - QA report awards: XXX XXX USDC (Notion: QA pool)
-  - Gas report awards: XXX XXX USDC (Notion: Gas pool)
-  - Judge awards: XXX XXX USDC (Notion: Judge Fee)
-  - Lookout awards: XXX XXX USDC (Notion: Sum of Pre-sort fee + Pre-sort early bonus)
-  - Scout awards: $500 USDC (Notion: Scout fee - but usually $500 USDC)
-  - (this line can be removed if there is no mitigation) Mitigation review contest: XXX XXX USDC (*Opportunity goes to top X certified wardens based on placement in this contest.*)
+# Frankencoin contest details
+- Total Prize Pool: $60,500 USDC 
+  - HM awards: $42,500 USDC 
+  - QA report awards: $5,000 USDC 
+  - Gas report awards: $2,500 USDC 
+  - Judge awards: $6,000 USDC 
+  - Lookout awards: $4,000 USDC 
+  - Scout awards: $500 USDC
 - Join [C4 Discord](https://discord.gg/code4rena) to register
-- Submit findings [using the C4 form](https://code4rena.com/contests/YYYY-MM-sponsorName-contest/submit)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2023-04-frankencoin-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
-- Starts TBD XXX XXX XX 20:00 UTC (ex. `Starts March 22, 2023 20:00 UTC`)
-- Ends TBD XXX XXX XX 20:00 UTC (ex. `Ends March 30, 2023 20:00 UTC`)
+- Starts April 12, 2023 20:00 UTC 
+- Ends April 17, 2023 20:00 UTC 
 
 ## Automated Findings / Publicly Known Issues
 
@@ -111,25 +94,27 @@ Automated findings output for the contest can be found [here](add link to report
 ## Scoping Details 
 ```
 - If you have a public code repo, please share it here:  
-- How many contracts are in scope?:   
-- Total SLoC for these contracts?:  
-- How many external imports are there?:  
-- How many separate interfaces and struct definitions are there for the contracts within scope?:  
-- Does most of your code generally use composition or inheritance?:   
-- How many external calls?:   
-- What is the overall line coverage percentage provided by your tests?:  
-- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:   
-- Please describe required context:   
-- Does it use an oracle?:  
+- How many contracts are in scope?:   16
+- Total SLoC for these contracts?:  900
+- How many external imports are there?: 0  
+- How many separate interfaces and struct definitions are there for the contracts within scope?:  6
+- Does most of your code generally use composition or inheritance?:   Composition
+- How many external calls?:   0
+- What is the overall line coverage percentage provided by your tests?:  70
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:  true 
+- Please describe required context:   There is a paper describing the economics of the system.
+- Does it use an oracle?:  No
 - Does the token conform to the ERC20 standard?:  
-- Are there any novel or unique curve logic or mathematical models?: 
+- Are there any novel or unique curve logic or mathematical models?: There are two novel logics in the system. The first one is an auction mechanism to liquidate collateral. The second one is a built-in bonding curve when creating or redeeming equity tokens.
 - Does it use a timelock function?:  
 - Is it an NFT?: 
 - Does it have an AMM?:   
-- Is it a fork of a popular project?:   
+- Is it a fork of a popular project?: No  
 - Does it use rollups?:   
 - Is it multi-chain?:  
 - Does it use a side-chain?: 
+- Describe any specific areas you would like addressed. E.g. Please try to break XYZ.": It is vital that there are no possibilities to mint infinite Frankencoins and that no one's deposited collateral can be stolen.
+- Do you have a preferred timezone for communication?: CET
 ```
 
 # Tests
