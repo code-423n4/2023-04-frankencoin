@@ -67,6 +67,14 @@ Automated findings output for the contest can be found [here](add link to report
 
 [ ⭐️ SPONSORS ADD INFO HERE ]
 
+# Introduction to Frankencoin
+
+The Frankencoin (ZCHF), an oracle-free, collateralized Swiss Franc stablecoin that is intended to track the value of the Swiss Franc. Our mission is to create a stablecoin that addresses the current issues faced by existing stablecoins. These issues include trusting centralized third parties, dependence on centralized oracles, and limitations in the types of collateral available to mint the stablecoin.
+
+It's governance is decentralized, with anyone being able to propose new minting mechanisms and anyone who contributed more than 3% to the stability reserve being able to veto new minting mechanisms. 
+
+So far, the Frankencoin has two approved minting mechanism. Both are accessible through this frontend. One is a simple swap contract to convert XCHF (CryptoFranc, fiat-collateralized stablecoin) into ZCHF and back. The other is a novel collateralized minting mechanism based on auctions. Unlike the minting mechanisms of other collateralized stablecoins, Frankencoin's auction-based mechanism does not depend on external oracles. It is very flexible with regards to the used collateral. In principle, it supports any collateral with sufficient availability on the market. However, its liquidation mechanism is slower than that of other collaterlized stablecoins, making it less suitable for highly volatile types of collateral. The name is inspired by the system's self-governing nature.
+
 # Overview
 
 *Please provide some context about the code being audited, and identify any areas of specific concern in reviewing the code. (This is a good place to link to your docs, if you have them.)*
