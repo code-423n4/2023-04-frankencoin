@@ -163,14 +163,14 @@ The focus of this audit are the smart contracts that comprise key parts of the F
 
 
 # Links
-*[Frankencoin App](https://frankencoin.com/)*
+[Frankencoin App](https://frankencoin.com/)
 
-*[Documentation](https://docs.frankencoin.com/)*
+[Documentation](https://docs.frankencoin.com/)
 
-*[Blog](https://frankencoin.substack.com/)*
+[Blog](https://frankencoin.substack.com/)
 
-*[Forum](https://github.com/Frankencoin-ZCHF/FrankenCoin/discussions)*
+[Forum](https://github.com/Frankencoin-ZCHF/FrankenCoin/discussions)
 
-*[Telegram](https://t.me/frankencoinzchf)*
+[Telegram](https://t.me/frankencoinzchf)
 
 
