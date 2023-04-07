@@ -138,10 +138,14 @@ So far, the Frankencoin has two approved minting mechanism. Both are accessible 
 
 
 # Links
-Frankencoin App
-Documentation
-Blog
-Forum
-[Telegram](https://t.me/frankencoinzchf) 
+*[Frankencoin App](https://frankencoin.com/)*
+
+*[Documentation](https://docs.frankencoin.com/)*
+
+*[Blog](https://frankencoin.substack.com/)*
+
+*[Forum](https://github.com/Frankencoin-ZCHF/FrankenCoin/discussions)*
+
+*[Telegram](https://t.me/frankencoinzchf)*
 
 
