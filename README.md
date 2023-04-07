@@ -71,7 +71,7 @@ Happy hunting 🕵
 
 _Frankencoin team_
 
-## Automated Findings / Publicly Known Issues *Input Luzius🔴
+## Automated Findings / Publicly Known Issues 
 
 Automated findings output for the contest can be found [here](add link to report) within an hour of contest opening.
 
