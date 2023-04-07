@@ -59,6 +59,16 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 - Starts April 12, 2023 20:00 UTC 
 - Ends April 17, 2023 20:00 UTC 
 
+## Hello Wardens 👋
+
+Yes! You're here! Awesome. We are super excited for your journey on unpacking and dissecting our code. We will do our best to be available around the clock for all your questions, small, big, silly or severe.
+
+We wish you luck on your audit.
+
+Happy hunting 🕵
+
+Frankencoin team
+
 ## Automated Findings / Publicly Known Issues
 
 Automated findings output for the contest can be found [here](add link to report) within an hour of contest opening.
@@ -73,7 +83,9 @@ The Frankencoin (ZCHF), an oracle-free, collateralized Swiss Franc stablecoin th
 
 It's governance is decentralized, with anyone being able to propose new minting mechanisms and anyone who contributed more than 3% to the stability reserve being able to veto new minting mechanisms. 
 
-So far, the Frankencoin has two approved minting mechanism. Both are accessible through this frontend. One is a simple swap contract to convert XCHF (CryptoFranc, fiat-collateralized stablecoin) into ZCHF and back. The other is a novel collateralized minting mechanism based on auctions. Unlike the minting mechanisms of other collateralized stablecoins, Frankencoin's auction-based mechanism does not depend on external oracles. It is very flexible with regards to the used collateral. In principle, it supports any collateral with sufficient availability on the market. However, its liquidation mechanism is slower than that of other collaterlized stablecoins, making it less suitable for highly volatile types of collateral. The name is inspired by the system's self-governing nature.
+So far, the Frankencoin has two approved minting mechanism. Both are accessible through this frontend. One is a simple swap contract to convert XCHF (CryptoFranc, fiat-collateralized stablecoin) into ZCHF and back. 
+
+The other is a novel collateralized minting mechanism based on auctions. Unlike the minting mechanisms of other collateralized stablecoins, Frankencoin's auction-based mechanism does not depend on external oracles. It is very flexible with regards to the used collateral. In principle, it supports any collateral with sufficient availability on the market. However, its liquidation mechanism is slower than that of other collaterlized stablecoins, making it less suitable for highly volatile types of collateral. The name is inspired by the system's self-governing nature.
 
 # Overview
 
