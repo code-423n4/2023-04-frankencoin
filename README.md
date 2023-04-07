@@ -79,7 +79,7 @@ So far, the Frankencoin has two approved minting mechanism. Both are accessible 
 
 *Please provide some context about the code being audited, and identify any areas of specific concern in reviewing the code. (This is a good place to link to your docs, if you have them.)*
 
-# Scope
+# Scope / Contracts
 
 *List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus.*
 
@@ -88,6 +88,11 @@ So far, the Frankencoin has two approved minting mechanism. Both are accessible 
 | Contract | SLOC | Purpose | Libraries used |  
 | ----------- | ----------- | ----------- | ----------- |
 | [contracts/folder/sample.sol](contracts/folder/sample.sol) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+
+# Points of Interest
+
+*All funds are expected to be secure through the all contracts.
+
 
 ## Out of scope
 
@@ -130,3 +135,13 @@ So far, the Frankencoin has two approved minting mechanism. Both are accessible 
 *Provide every step required to build the project from a fresh git clone, as well as steps to run the tests with a gas report.* 
 
 *Note: Many wardens run Slither as a first pass for testing.  Please document any known errors with no workaround.* 
+
+
+# Links
+Frankencoin App
+Documentation
+Blog
+Forum
+[Telegram](https://t.me/frankencoinzchf) 
+
+
