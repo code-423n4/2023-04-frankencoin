@@ -157,18 +157,18 @@ The focus of this audit are the smart contracts that comprise key parts of the F
 
 Assuming that you have [node](https://nodejs.org/) already installed, you can install [Hardhat](https://hardhat.org/hardhat-runner/docs/getting-started#overview) and all the other dependencies with the following two commands:
 
-'''console
+```shell
 npm install --save-dev hardhat
 npm install
-'''
+```
 
 Next you can compile the code, run the test suite or calculate test coverage with the following commands. The 'test' command includes a gas usage report.
 
-'''console
+```shell
 npx hardhat compile
 npx hardhat test
 npx hardhat coverage
-'''
+```
 
 # Links
 [Frankencoin App](https://frankencoin.com/)
