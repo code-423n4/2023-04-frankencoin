@@ -117,8 +117,6 @@ The focus of this audit are the smart contracts that comprise key parts of the F
 
 *All funds are expected to be secure through the all contracts.
 
-
-
 ## Out of scope *Input Luzius🔴
 
 *List any files/contracts that are out of scope for this audit.* 
@@ -138,29 +136,39 @@ The focus of this audit are the smart contracts that comprise key parts of the F
 - How many separate interfaces and struct definitions are there for the contracts within scope?:  6
 - Does most of your code generally use composition or inheritance?:   Composition
 - How many external calls?:   0
-- What is the overall line coverage percentage provided by your tests?:  70
+- What is the overall line coverage percentage provided by your tests?:  98%
 - Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:  true 
 - Please describe required context:   There is a paper describing the economics of the system.
 - Does it use an oracle?:  No
 - Does the token conform to the ERC20 standard?: Yes 
 - Are there any novel or unique curve logic or mathematical models?: There are two novel logics in the system. The first one is an auction mechanism to liquidate collateral. The second one is a built-in bonding curve when creating or redeeming equity tokens.
-- Does it use a timelock function?: Yes *Review Luzius🟠
+- Does it use a timelock function?: Yes, for example FPS tokens can only be redeemed after 90 days.
 - Is it an NFT?: No
-- Does it have an AMM?: No
+- Does it have an AMM?: Kind of. It offers an AMM-like possibility to mint and redeem Frankencoin Pool Shares (FPS).
 - Is it a fork of a popular project?: No  
 - Does it use rollups?: No
 - Is it multi-chain?: No
 - Does it use a side-chain?: No
-- Describe any specific areas you would like addressed. E.g. Please try to break XYZ.": It is vital that there are no possibilities to mint infinite Frankencoins and that no one's deposited collateral can be stolen.
+- Describe any specific areas you would like addressed. E.g. Please try to break XYZ.": It is vital that there are no possibilities to mint infinite Frankencoins and that no one's deposited collateral can be stolen. The bidding process has been carefully designed with game theory in mind such that it does not pay off to manipulate the auction.
 - Do you have a preferred timezone for communication?: CET
 ```
 
-# Tests *Input Luzius🔴
+# Tests
 
-*Provide every step required to build the project from a fresh git clone, as well as steps to run the tests with a gas report.* 
+Assuming that you have [node](https://nodejs.org/) already installed, you can install [Hardhat](https://hardhat.org/hardhat-runner/docs/getting-started#overview) and all the other dependencies with the following two commands:
 
-*Note: Many wardens run Slither as a first pass for testing.  Please document any known errors with no workaround.* 
+'''console
+npm install --save-dev hardhat
+npm install
+'''
 
+Next you can compile the code, run the test suite or calculate test coverage with the following commands. The 'test' command includes a gas usage report.
+
+'''console
+npx hardhat compile
+npx hardhat test
+npx hardhat coverage
+'''
 
 # Links
 [Frankencoin App](https://frankencoin.com/)

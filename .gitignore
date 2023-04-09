@@ -1,3 +1,9 @@
+# Custom
+typechain
+typechain-types
+artifacts
+cache
+
 # Logs
 logs
 *.log
