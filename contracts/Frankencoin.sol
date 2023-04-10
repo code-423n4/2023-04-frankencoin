@@ -10,6 +10,12 @@ import "./IFrankencoin.sol";
  * The Frankencoin (ZCHF) is an ERC-20 token that is designed to track the value of the Swiss franc.
  * It is not upgradable, but open to arbitrary minting plugins. These are automatically accepted if none of the
  * qualified pool share holders casts a veto, leading to a flexible but conservative governance.
+ *
+ * The underlying assumption is that there is one or more qualified pool share (FPS) holders that watch the proposals
+ * and veto if necessary. At the same time, it is also assumed that no one vetoes all of them, thereby starving the
+ * system. The system can only function as long as all the qualified shareholders act in the interest of the system
+ * or at least do not actively sabotage it. As long as everyone believes that the governance works well, no one will
+ * ever make an unsound proposal and it won't be necessary to ever cast a veto, making the system self-governing.
  */
 contract Frankencoin is ERC20PermitLight, IFrankencoin {
 
@@ -64,7 +70,7 @@ contract Frankencoin is ERC20PermitLight, IFrankencoin {
    }
 
    /**
-    * Publicly accessible method to suggest a new way of minting Frankencoin.
+    * Publicly accessible method to suggest a new way of minting Frankencoins.
     *
     * The caller has to pay an application fee that is irrevocably lost even if the new minter is vetoed.
     *

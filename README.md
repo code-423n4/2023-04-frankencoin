@@ -13,13 +13,13 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 ---
 # Repo setup
 
-## ⭐️ Sponsor: Add code to this repo *Input Luzius🔴
+## ⭐️ Sponsor: Add code to this repo
 
-- [ ] Create a PR to this repo with the below changes:
-- [ ] Provide a self-contained repository with working commands that will build (at least) all in-scope contracts, and commands that will run tests producing gas reports for the relevant contracts.
-- [ ] Make sure your code is thoroughly commented using the [NatSpec format](https://docs.soliditylang.org/en/v0.5.10/natspec-format.html#natspec-format).
-- [ ] Please have final versions of contracts and documentation added/updated in this repo **no less than 24 hours prior to contest start time.**
-- [ ] Be prepared for a 🚨code freeze🚨 for the duration of the contest — important because it establishes a level playing field. We want to ensure everyone's looking at the same code, no matter when they look during the contest. (Note: this includes your own repo, since a PR can leak alpha to our wardens!)
+- [x] Create a PR to this repo with the below changes:
+- [x] Provide a self-contained repository with working commands that will build (at least) all in-scope contracts, and commands that will run tests producing gas reports for the relevant contracts.
+- [x] Make sure your code is thoroughly commented using the [NatSpec format](https://docs.soliditylang.org/en/v0.5.10/natspec-format.html#natspec-format).
+- [x] Please have final versions of contracts and documentation added/updated in this repo **no less than 24 hours prior to contest start time.**
+- [x] Be prepared for a 🚨code freeze🚨 for the duration of the contest — important because it establishes a level playing field. We want to ensure everyone's looking at the same code, no matter when they look during the contest. (Note: this includes your own repo, since a PR can leak alpha to our wardens!)
 
 
 ---
@@ -28,9 +28,9 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 
 Under "SPONSORS ADD INFO HERE" heading below, include the following:
 
-- [ ] Modify the bottom of this `README.md` file to describe how your code is supposed to work with links to any relevent documentation and any other criteria/details that the C4 Wardens should keep in mind when reviewing. ([Here's a well-constructed example.](https://github.com/code-423n4/2022-08-foundation#readme))
-  - [ ] When linking, please provide all links as full absolute links versus relative links
-  - [ ] All information should be provided in markdown format (HTML does not render on Code4rena.com)
+- [x] Modify the bottom of this `README.md` file to describe how your code is supposed to work with links to any relevent documentation and any other criteria/details that the C4 Wardens should keep in mind when reviewing. ([Here's a well-constructed example.](https://github.com/code-423n4/2022-08-foundation#readme))
+  - [x] When linking, please provide all links as full absolute links versus relative links
+  - [x] All information should be provided in markdown format (HTML does not render on Code4rena.com)
 - [ ] Under the "Scope" heading, provide the name of each contract and:
   - [ ] source lines of code (excluding blank lines and comments) in each
   - [ ] external contracts called in each
@@ -79,68 +79,106 @@ Automated findings output for the contest can be found [here](add link to report
 
 [ ⭐️ SPONSORS ADD INFO HERE ]
 
-# Introduction to Frankencoin *Review Luzius🟠
+# Introduction to Frankencoin
 
 ## Motivation
 
-_Democratization of Money Creation_: Today, money is created by central banks and multiplied by commercial banks, that indirectly determine the resource allocation in the economy. This leads to overinvestment in government bonds and real estate, and underinvestment in innovation and growth.
+_Democratization of Money Creation_: Today, money is created by central banks and multiplied by commercial banks, thereby indirectly determine the resource allocation in the economy. Like every system that relies on central planning, this
+unpreventable leads a misallovation of resources, typically an overinvestment in government bonds and real estate, and underinvestment in innovation and growth.
 
-Our vision is that anyone with eligible collateral can create their own money, thereby decentralizing the resource allocation process. This unlocks growth and prosperity.
+Our vision is that anyone with eligible collateral can create their own money. We hope a decentralization the process of 
+money creation and to unlock dormant growth and prosperity.
 
 ## What is Frankencoin?
 
 The Frankencoin (ZCHF), an oracle-free, collateralized Swiss Franc stablecoin that is intended to track the value of the Swiss Franc. Our mission is to create a stablecoin that addresses the current issues faced by existing stablecoins. These issues include trusting centralized third parties, dependence on centralized oracles, and limitations in the types of collateral available to mint the stablecoin.
 
-It's governance is decentralized, with anyone being able to propose new minting mechanisms and anyone who contributed more than 3% to the stability reserve being able to veto new minting mechanisms. 
+It's governance is decentralized, with anyone being able to propose new minting mechanisms and anyone who contributed more than 3% to the stability reserve being able to veto them. So far, the Frankencoin has two approved minting mechanism. Both are accessible through the [frontend](https://frankencoin.com). One is a simple swap contract to convert XCHF (CryptoFranc, fiat-collateralized stablecoin) into ZCHF and back. The other is a novel collateralized minting mechanism based on auctions. 
 
-So far, the Frankencoin has two approved minting mechanism. Both are accessible through this frontend. One is a simple swap contract to convert XCHF (CryptoFranc, fiat-collateralized stablecoin) into ZCHF and back. 
+Unlike the minting mechanisms of other collateralized stablecoins, Frankencoin's auction-based mechanism does not depend on external oracles. It is very flexible with regards to the used collateral. In principle, it supports any collateral with sufficient availability on the market. However, its liquidation mechanism is slower than that of other collaterlized stablecoins, making it less suitable for highly volatile types of collateral. The name is inspired by the system's self-governing nature.
 
-The other is a novel collateralized minting mechanism based on auctions. Unlike the minting mechanisms of other collateralized stablecoins, Frankencoin's auction-based mechanism does not depend on external oracles. It is very flexible with regards to the used collateral. In principle, it supports any collateral with sufficient availability on the market. However, its liquidation mechanism is slower than that of other collaterlized stablecoins, making it less suitable for highly volatile types of collateral. The name is inspired by the system's self-governing nature.
+# Overview
 
-# Overview *Review Luzius🟠
+The focus of this audit are the smart contracts that comprise key parts of the Frankecoin app, namely the minting of Frakencoin tokens (ZCHF), the purchase of reserve pool shares, and the stablecoin conversion between XCHF and ZCHF. It is vital that there are no possibilities to mint infinite Frankencoins and that no one's deposited collateral can be stolen. There is a [Gitbook documentation page](https://docs.frankencoin.com/) with much more additional information.
 
-*Please provide some context about the code being audited, and identify any areas of specific concern in reviewing the code. (This is a good place to link to your docs, if you have them.)*
+# Scope / Contracts
 
-The focus of this audit are the smart contracts that comprise key parts of the Frankecoin app, namely the minting of Frakencoin tokens (ZCHF), the purchase of reserve pool shares, and the stablecoin conversion between XCHF and ZCHF. It is vital that there are no possibilities to mint infinite Frankencoins and that no one's deposited collateral can be stolen.
+The following are the relevant source files. The list excludes interfaces and test files.
 
-# Scope / Contracts *Input Luzius🔴
+| Contract | SLOC | Purpose
+| ----------- | ----------- | ----------- |
+| [contracts/Frankencoin.sol](contracts/Position.sol) | 137 | The Frankencoin ERC20 token, supporting external minters, keeping track of the minter reserve, and depending on the equity contract for governance. |
+| [contracts/Equity.sol](contracts/Equity.sol) | 142 | The Frankencoin Pool Shares ERC20 token with time-weighted vetoing and a built-in market maker for issuance and redemption. |
+| [contracts/MintingHub.sol](contracts/MintingHub.sol) | 190 | A minter that can create and challenge positions. |
+| [contracts/Position.sol](contracts/Position.sol) | 227 | Holds the collateral of an individual user for minting fresh Frankencoins. |
+| [contracts/StablecoinBridge.sol](contracts/StablecoinBridge.sol) | 48 | A contract to swap other stablecoins with the same base currency 1:1. |
+| [contracts/ERC20.sol](contracts/ERC20.sol) | 78 | An ERC20 token with support for inifite allowances and ERC677 notifications. |
+| [contracts/ERC20PermitLight.sol](contracts/ERC20PermitLight.sol) | 51 | A lightweight ERC20 permit contract. |
+| [contracts/MathUtil.sol](contracts/MathUtil.sol) | 26 | Mathematical utility functions. |
+| [contracts/Ownable.sol](contracts/Ownable.sol) | 21 | The usual Ownable contract. |
+| [contracts/PositionFactory.sol](contracts/PositionFactory.sol) | 29 | A factory for creating new or cloning existing positions. |
+| Total | 949 |  |
 
-*List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus.*
+Lines of code have been counted with the command
 
-*For line of code counts, we recommend using [cloc](https://github.com/AlDanial/cloc).* 
+```shell
+.\cloc-1.96.exe contracts --exclude-dir=test --by-file --not-match-f='II*'
+```
 
-| Contract | SLOC | Purpose | Libraries used |  
-| ----------- | ----------- | ----------- | ----------- |
-| [contracts/folder/sample.sol](contracts/folder/sample.sol) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+# Points of Interest
 
-# Points of Interest *Input Luzius🔴
+To function properly, the Frankencoin depends as much on economic incentives as it does on the security of the smart contracts themselves.
 
-*All funds are expected to be secure through the all contracts.
+The following are the three cornerstones for making sure the system is robust.
 
-## Out of scope *Input Luzius🔴
+* It should not be possible to mint Frankencoins in a way that the FPS holders disapprove.
+* The FPS issuance and redemption mechanism should be path-independent, an attacker should not be possible to drain capital from the equity contract through repeated interaction with the issuance and redemption mechanism.
+* Collateralized minting should be safe. I.e. it is impossible for an attacker to steal someone's collateral, it is impossible for a position owner to mint beyond the limit of a position, and it is impossible for a position owner to withdraw collateral without having repaid the corresponding amount of previously minted Frankencoins.
 
-*List any files/contracts that are out of scope for this audit.* 
+## Out of scope
 
-# Additional Context *Input Luzius🔴
+All the files in the [contracts/test](contracts/test) folder are only used for testing and out of scope for this audit.
 
-*Describe any novel or unique curve logic or mathematical models implemented in the contracts*
+The findings of the previous audit that we decided not to fix should not be reported again.
 
-*Sponsor, please confirm/edit the information below.* *Input Luzius🔴
+# Additional Context
+
+There are two mechanisms of particular interest, the issuance and redemption of pool shares, as well as the collateral auction mechanism.
+
+## Auction Mechanism
+
+The novel idea behind the auction mechanism is to two piles of collateral for sale, one from the owner of the position
+and one from the challenger that questions the soundness of the position. The final price determines which of the two 
+the bidder gets. If the price is high enough, the bidder gets the collateral of the challenger. If the price is too low,
+the bidder gets the collateral from the position owner. This ensures that the position owner has no incentive to overbid
+in order to avert a challenge. Doing so would be costly for them as they would have to buy collateral above the market
+price from the challenger as often as the challenger repeats it. The only pre-condition for this to work is that the
+collateral asset is available on the market.
+
+## Pool Shares
+
+Anyone can acquire new pool shares at any time through an AMM-inspired mechanism. If the Frankencoin system was a
+bank, the FPS tokens would be its shares. They automatically become more valuable as the system earns fees and liquidation
+proceeds, but decline in value in case of losses. The bonding curve for issuance and redemption is set such that the
+market cap of all pool shares is always three times the equity reserves of the system, with the supply being proportional
+to the cubic root of the market cap and the price being proportional to the cubic root squared. The mathematical 
+implications of having such a bonding curve are beyond the scope of this audit, but it should nonetheless be made sure
+that no one can manipulate this system to their advantage.
 
 ## Scoping Details 
 ```
-- If you have a public code repo, please share it here:  
-- How many contracts are in scope?:   16
-- Total SLoC for these contracts?:  900
+- Public code repo: [github.com/FrankencoinZCHF](github.com/FrankencoinZCHF)
+- How many contracts are in scope?: 15
+- Total SLoC for these contracts?: 949
 - How many external imports are there?: 0  
-- How many separate interfaces and struct definitions are there for the contracts within scope?:  6
-- Does most of your code generally use composition or inheritance?:   Composition
-- How many external calls?:   0
-- What is the overall line coverage percentage provided by your tests?:  98%
+- How many separate interfaces and struct definitions are there for the contracts within scope?: 6
+- Does most of your code generally use composition or inheritance?: Composition
+- How many external calls?: 0
+- What is the overall line coverage percentage provided by your tests?: 98%
 - Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:  true 
-- Please describe required context:   There is a paper describing the economics of the system.
-- Does it use an oracle?:  No
-- Does the token conform to the ERC20 standard?: Yes 
+- Please describe required context: There is a [research paper](https://www.snb.ch/n/mmr/reference/sem_2022_06_03_maire/source/sem_2022_06_03_maire.n.pdf) describing the game theory behind the auction mechanism.
+- Does it use an oracle?: No
+- Does the token conform to the ERC20 standard?: Yes, both tokens.
 - Are there any novel or unique curve logic or mathematical models?: There are two novel logics in the system. The first one is an auction mechanism to liquidate collateral. The second one is a built-in bonding curve when creating or redeeming equity tokens.
 - Does it use a timelock function?: Yes, for example FPS tokens can only be redeemed after 90 days.
 - Is it an NFT?: No
@@ -170,6 +208,8 @@ npx hardhat test
 npx hardhat coverage
 ```
 
+Note that the version of the Frankencoin currently deployed on mainnet and connected to the frontend is slightly outdated.
+
 # Links
 [Frankencoin App](https://frankencoin.com/)
 
@@ -180,5 +220,3 @@ npx hardhat coverage
 [Forum](https://github.com/Frankencoin-ZCHF/FrankenCoin/discussions)
 
 [Telegram](https://t.me/frankencoinzchf)
-
-
