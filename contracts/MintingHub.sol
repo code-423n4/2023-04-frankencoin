@@ -56,6 +56,14 @@ contract MintingHub {
         POSITION_FACTORY = IPositionFactory(factory);
     }
 
+    function openPosition(
+        address _collateralAddress, uint256 _minCollateral, uint256 _initialCollateral,
+        uint256 _mintingMaximum, uint256 _expirationSeconds, uint256 _challengeSeconds,
+        uint32 _mintingFeePPM, uint256 _liqPrice, uint32 _reservePPM) public returns (address) {
+            return openPosition(_collateralAddress, _minCollateral, _initialCollateral, _mintingMaximum,
+            7 days, _expirationSeconds, _challengeSeconds, _mintingFeePPM, _liqPrice, _reservePPM);
+    }
+
     /**
      * Open a collateralized loan position. See also https://docs.frankencoin.com/positions/open .
      * For a successful call, you must set allowances for both ZCHF and the collateral token, allowing
@@ -79,7 +87,7 @@ contract MintingHub {
      */
     function openPosition(
         address _collateralAddress, uint256 _minCollateral, uint256 _initialCollateral,
-        uint256 _mintingMaximum, uint256 _expirationSeconds, uint256 _challengeSeconds,
+        uint256 _mintingMaximum, uint256 _initPeriodSeconds, uint256 _expirationSeconds, uint256 _challengeSeconds,
         uint32 _mintingFeePPM, uint256 _liqPrice, uint32 _reservePPM) public returns (address) {
         IPosition pos = IPosition(
             POSITION_FACTORY.createNewPosition(
@@ -87,8 +95,8 @@ contract MintingHub {
                 address(zchf),
                 _collateralAddress,
                 _minCollateral,
-                _initialCollateral,
                 _mintingMaximum,
+                _initPeriodSeconds,
                 _expirationSeconds,
                 _challengeSeconds,
                 _mintingFeePPM,
@@ -98,6 +106,7 @@ contract MintingHub {
         );
         zchf.registerPosition(address(pos));
         zchf.transferFrom(msg.sender, address(zchf.reserve()), OPENING_FEE);
+        require(_initialCollateral >= _minCollateral, "must start with min col");
         IERC20(_collateralAddress).transferFrom(msg.sender, address(pos), _initialCollateral);
 
         return address(pos);
@@ -293,8 +302,8 @@ interface IPositionFactory {
         address _zchf,
         address _collateral,
         uint256 _minCollateral,
-        uint256 _initialCollateral,
         uint256 _initialLimit,
+        uint256 _initPeriodSeconds,
         uint256 _duration,
         uint256 _challengePeriod,
         uint32 _mintingFeePPM,
