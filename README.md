@@ -122,7 +122,7 @@ that no one can manipulate this system to their advantage.
 ### Scoping Details
 
 ```
-- Public code repo: [github.com/FrankencoinZCHF](github.com/FrankencoinZCHF)
+- Public code repo: [github.com/frankencoin-zchf](github.com/frankencoin-zchf)
 - How many contracts are in scope?: 15
 - Total SLoC for these contracts?: 949
 - How many external imports are there?: 0  
