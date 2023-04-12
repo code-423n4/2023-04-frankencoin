@@ -31,8 +31,6 @@ Automated findings output for the contest can be found [here](add link to report
 
 _Note for C4 wardens: Anything included in the automated findings output is considered a publicly known issue and is ineligible for awards._
 
-[ ⭐️ SPONSORS ADD INFO HERE ]
-
 ## Introduction to Frankencoin
 
 ### Motivation
