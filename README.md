@@ -59,19 +59,19 @@ The focus of this audit are the smart contracts that comprise key parts of the F
 
 The following are the relevant source files. The list excludes interfaces and test files.
 
-| Contract | SLOC | Purpose
-| ----------- | ----------- | ----------- |
-| [contracts/Position.sol](https://github.com/code-423n4/2023-04-frankencoin/blob/main/contracts/Position.sol) | 227 | Holds the collateral of an individual user for minting fresh Frankencoins. |
-| [contracts/MintingHub.sol](https://github.com/code-423n4/2023-04-frankencoin/blob/main/contracts/MintingHub.sol) | 190 | A minter that can create and challenge positions. |
-| [contracts/Equity.sol](https://github.com/code-423n4/2023-04-frankencoin/blob/main/contracts/Equity.sol) | 142 | The Frankencoin Pool Shares ERC20 token with time-weighted vetoing and a built-in market maker for issuance and redemption. |
-| [contracts/Frankencoin.sol](https://github.com/code-423n4/2023-04-frankencoin/blob/main/contracts/Position.sol) | 137 | The Frankencoin ERC20 token, supporting external minters, keeping track of the minter reserve, and depending on the equity contract for governance. |
+| Contract | SLOC | Purpose | Mainnet Instance |
+| ----------- | ----------- | ----------- | ----------- |
+| [contracts/Position.sol](https://github.com/code-423n4/2023-04-frankencoin/blob/main/contracts/Position.sol) | 227 | Holds the collateral of an individual user for minting fresh Frankencoins. | [0x66541A...](https://etherscan.io/address/0x66541A729046ece8A380C1Fd70462c7b657d9171) (one of potentially many) |
+| [contracts/MintingHub.sol](https://github.com/code-423n4/2023-04-frankencoin/blob/main/contracts/MintingHub.sol) | 190 | A minter that can create and challenge positions. | [0x0E5Dfe...](https://etherscan.io/address/0x0E5Dfe570E5637f7b6B43f515b30dD08FBFCb9ea) |
+| [contracts/Equity.sol](https://github.com/code-423n4/2023-04-frankencoin/blob/main/contracts/Equity.sol) | 142 | The Frankencoin Pool Shares ERC20 token with time-weighted vetoing and a built-in market maker for issuance and redemption. | [0x346206...](https://etherscan.io/address/0x34620625DFfCeBB199331B8599829426a46fd123) |
+| [contracts/Frankencoin.sol](https://github.com/code-423n4/2023-04-frankencoin/blob/main/contracts/Position.sol) | 137 | The Frankencoin ERC20 token, supporting external minters, keeping track of the minter reserve, and depending on the equity contract for governance. |  [0x7a7870...](https://etherscan.io/address/0x7a787023f6E18f979B143C79885323a24709B0d8) |
 | [contracts/ERC20.sol](https://github.com/code-423n4/2023-04-frankencoin/blob/main/contracts/ERC20.sol) | 78 | An ERC20 token with support for infinite allowances and ERC677 notifications. |
 | [contracts/ERC20PermitLight.sol](https://github.com/code-423n4/2023-04-frankencoin/blob/main/contracts/ERC20PermitLight.sol) | 51 | A lightweight ERC20 permit contract. |
-| [contracts/StablecoinBridge.sol](https://github.com/code-423n4/2023-04-frankencoin/blob/main/contracts/StablecoinBridge.sol) | 48 | A contract to swap other stablecoins with the same base currency 1:1. |
-| [contracts/PositionFactory.sol](https://github.com/code-423n4/2023-04-frankencoin/blob/main/contracts/PositionFactory.sol) | 29 | A factory for creating new or cloning existing positions. |
+| [contracts/StablecoinBridge.sol](https://github.com/code-423n4/2023-04-frankencoin/blob/main/contracts/StablecoinBridge.sol) | 48 | A contract to swap other stablecoins with the same base currency 1:1. | [0x4125cD...](https://etherscan.io/address/0x4125cD1F826099A4DEaD6b7746F7F28B30d8402B) |
+| [contracts/PositionFactory.sol](https://github.com/code-423n4/2023-04-frankencoin/blob/main/contracts/PositionFactory.sol) | 29 | A factory for creating new or cloning existing positions. | [0x63cF7c...](https://etherscan.io/address/0x63cF7c82460C5d84d10be2219D80F746D8706b7E) |
 | [contracts/MathUtil.sol](https://github.com/code-423n4/2023-04-frankencoin/blob/main/contracts/MathUtil.sol) | 26 | Mathematical utility functions. |
 | [contracts/Ownable.sol](https://github.com/code-423n4/2023-04-frankencoin/blob/main/contracts/Ownable.sol) | 21 | The usual Ownable contract. |
-| Total | 949 |  |
+| Total | 949 |  |  |
 
 Lines of code have been counted with the command
 
@@ -148,6 +148,8 @@ that no one can manipulate this system to their advantage.
 
 ## Tests
 
+The project has been compiled and tested with hardhat, using the following commands:
+
 ```shell
 npm install
 npx hardhat compile
@@ -156,7 +158,13 @@ npx hardhat test
 npx hardhat coverage
 ```
 
-Note that the version of the Frankencoin currently deployed on mainnet and connected to the frontend is slightly outdated.
+Alternatively, there are some very basic tests using foundry. Given that foundry (and Rust and Visual Studio Build Tools) are installed, they can be run with the following command:
+
+```shell
+forge test
+```
+
+Furthermore, you can also interact with the latest set of contracts deployed on mainnet, either through the [frontend](https://frankencoin.com) or by interacting with the contracts directly. The contract addresses can be found in the 'Scope / Contracts' section.
 
 ## Links
 

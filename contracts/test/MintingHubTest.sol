@@ -199,8 +199,8 @@ contract MintingHubTest {
     }
 
     // poor man's replacement for console.out in solidity...
-    function revertWith(string memory msg, uint256 number) pure public {
-        revert(string(abi.encodePacked(msg, Strings.toString(number))));
+    function revertWith(string memory message, uint256 number) pure public {
+        revert(string(abi.encodePacked(message, Strings.toString(number))));
     }
 
     function challengeExpiredPosition() public {

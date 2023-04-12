@@ -3,6 +3,7 @@ typechain
 typechain-types
 artifacts
 cache
+cloc-1.96.exe
 
 # Logs
 logs
