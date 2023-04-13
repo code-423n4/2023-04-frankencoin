@@ -27,7 +27,7 @@ _Frankencoin team_
 
 ## Automated Findings / Publicly Known Issues
 
-Automated findings output for the contest can be found [here](https://gist.github.com/YinjiDawn/afe16e83a80a4bb7d08499718e14b86c) within an hour of contest opening.
+Automated findings output for the contest can be found [here](https://gist.github.com/CodingNameKiki/36f3bfb214907d68fdf3a43cb0cb8ae3) within an hour of contest opening.
 
 _Note for C4 wardens: Anything included in the automated findings output is considered a publicly known issue and is ineligible for awards._
 
