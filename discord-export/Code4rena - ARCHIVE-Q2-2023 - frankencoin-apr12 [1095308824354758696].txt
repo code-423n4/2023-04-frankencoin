@@ -1,0 +1,2052 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q2-2023 / frankencoin-apr12
+==============================================================
+
+[04/11/2023 11:32] paroxysm9999 (pinned)
+👋 Hello and welcome to the contest channel for the **$60,500 USDC Frankencoin** contest!
+
+📆 Contest opens 04/12/2023 20:00 (20:00 UTC) and runs through 04/19/2023 20:00 (20:00 UTC) (7 days).
+
+Please give a warm welcome to the Frankencoin team, particularly @levijohnson and @kronrod, who will be available for questions either here in the channel or via DM (**GMT+2 and GMT-4** timezone(s)).
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+Contest Page: https://code4rena.com/contests/2023-04-frankencoin
+
+{Embed}
+https://code4rena.com/contests/2023-04-frankencoin
+Code4rena Frankencoin
+$60,500 USDC
+12 April 2023—19 April 2023
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/c4-og-banner-0FCFA.png
+
+{Reactions}
+👋 (7) 👍 (6) 🫡 (2) 
+
+[04/11/2023 11:32] paroxysm9999
+Pinned a message.
+
+
+[04/11/2023 11:36] paroxysm9999
+Hey all 👋! Let's please limit conversation until the contest begins. Thanks!
+
+
+[04/12/2023 11:54] d_auditor
+Hi. I noticed that the bot race starts first. I just want to be sure the challenge is open to all
+
+{Reactions}
+👍 
+
+[04/12/2023 12:12] cloudellie
+This is an open audit competition -- and the bot qualifier race is also open to all.
+
+
+[04/12/2023 12:13] cloudellie
+Any questions about the bot race can be posted in #bot-race-help, so we can keep the discussion here focused on the main competition.
+
+
+[04/12/2023 12:14] d_auditor
+Alright. Awesome
+
+{Reactions}
+hi5 
+
+[04/12/2023 20:04] hermel007
+Hi all, I'm one of the brains behind the Frankencoin project. The contest is now live. Not sure if I should hope for you to find a lot of issues or none. 😄
+
+{Reactions}
+hi5 (18) 🤝 (7) 🫶 (2) 
+
+[04/12/2023 20:04] ladboy233
+bot racing.
+
+{Reactions}
+👀 
+
+[04/12/2023 20:05] dingo2077
+I would like to note that this morning I wrote to the developers whether they have tests for foundry, they said no, but they will write. And it done,  pushed it on github. Great to see such responsive dev, let's help them 🤝
+
+{Reactions}
+hi5 (16) 😮 
+
+[04/12/2023 20:19] codingnamekiki
+Finally a stablecoin
+
+
+[04/12/2023 20:19] codingnamekiki
+:chefskiss:
+
+{Reactions}
+cheers_badger (9) 
+
+[04/12/2023 20:44] ljmanini
+glhf
+
+
+[04/12/2023 20:55] ladboy233
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/image-F09CC.png
+
+
+[04/12/2023 20:55] ladboy233
+I do not think I can win though.
+
+
+[04/12/2023 20:56] ladboy233
+first time playing with the automatic tool. I am suprised, to some degree, they are useful.
+
+
+[04/12/2023 21:07] chaindev
+I guess this sentence means that issues on `audits/blockbite-audit.pdf` are out of scope.
+Anyway, the sentence is not perfect in the meaning. Can cause some dispute.
+I suggest to edit that sentence.
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/image-04742.png
+
+
+[04/12/2023 21:43] 0xcatellatech
+Hi, guys! Where's the link of the automated findings?
+
+{Reactions}
+👍 
+
+[04/12/2023 21:44] kartoonjoy
+The bot race just finished so when thats been decided, you'll get automated findings.
+
+
+[04/12/2023 21:46] 0xcatellatech
+Thanks mate!
+
+{Reactions}
+hi5 
+
+[04/12/2023 21:50] hermel007
+Yes, that's the meaning.
+
+{Reactions}
+👍 
+
+[04/12/2023 21:54] 0xkazimm
+When can i found previous findings?
+
+
+[04/12/2023 21:56] reentrant (pinned)
+https://github.com/Frankencoin-ZCHF/FrankenCoin/blob/main/audits/blockbite-audit.pdf
+
+{Embed}
+https://github.com/Frankencoin-ZCHF/FrankenCoin/blob/main/audits/blockbite-audit.pdf
+FrankenCoin/blockbite-audit.pdf at main · Frankencoin-ZCHF/FrankenC...
+Contribute to Frankencoin-ZCHF/FrankenCoin development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/FrankenCoin-51A90
+
+{Reactions}
+❤️ (2) 
+
+[04/12/2023 22:06] reentrant
+@kronrod can you expand on the description of the auction mechanism?
+
+- Is this to determine the market price of Frankencoin?
+- Are there 3 actors? IE. Position's Owner, Challenger, Bidders
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/image-9AF78.png
+
+
+[04/12/2023 22:50] levijohnson (pinned)
+hi @reentrant , the goal of the auction mechanism is to determine the fair price of the collateral, so that Frankencoin (XCHF) is always sufficiently backed and the system remains in balance. 
+
+Yes, there are more than 2 actors: The position owner, the challenger and the bidders. 
+
+Here's a slightly, but hopefully more conclusive, description from the frankecoin.com app: 
+
+"Collateralized minting positions allow their owner to mint ZCHF against a collateral. Anyone can open new collateral positions and start minting ZCHF once the initialization period has passed. Positions that are not sufficiently collateralized can be challenged by anyone through an auction mechanism. When challenging a position, the challenger must provide some of the collateral to be auctioned off. If the highest bid in the subsequent auction is high enough to show that the position is sufficiently collateralized, the challenge is averted and the bidder gets the challengers collateral in exchange for the highest bid. If the highest bid is lower, the challenge is considered successful, the bidder gets the collateral from the position and the position is closed, distributing excess proceeds to the reserve and paying a reward to the challenger."
+
+
+[04/12/2023 22:53] reentrant
+thanks!  
+
+About this line: `If the highest bid in the subsequent auction is high enough to show that the position is sufficiently collateralized...` 
+
+- how is "sufficiently collateralized" determined?
+
+
+[04/12/2023 23:05] escrow1337
+just out of curiosity, why weren't the bugs in the audit (which were previously found) not fixed yet?
+
+
+[04/12/2023 23:10] sovaslava9
+Do you made changes in code (new functional ) from your previous audit? or code is the same from previous audit
+
+
+[04/12/2023 23:18] reentrant
+Not 100% sure, but the audit report says they audited from commit 0db42977b331bd25a12e3a6da767b7df18a5d66b, and there's a bunch of commits after that in the project repo (https://github.com/Frankencoin-ZCHF/FrankenCoin)
+
+{Embed}
+https://github.com/Frankencoin-ZCHF/FrankenCoin
+GitHub - Frankencoin-ZCHF/FrankenCoin
+Contribute to Frankencoin-ZCHF/FrankenCoin development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/FrankenCoin-51A90
+
+{Reactions}
+👍 (3) 
+
+[04/12/2023 23:35] hermel007
+most were fixed. but some we consider non-issues so we decided against "fixing" then.
+
+{Reactions}
+👌 (3) 
+
+[04/12/2023 23:37] hermel007
+"sufficiently collateralized" means that the price achieved in the auction is at least as high as the liquidation price of the position.
+
+
+[04/12/2023 23:44] reentrant
+Thanks! I'm going through the whitepaper and see that section 2 is helpful.  Is the whitepaper out of date to the implementation in the C4 repo?
+
+
+[04/12/2023 23:48] hermel007
+Yes, the paper is not entirely up to date. The basic idea is the same, but there are some subtle differences.
+
+{Reactions}
+🤝 (2) 
+
+[04/12/2023 23:50] 0xweiss
+@kronrod Hi! where can we find the address of the reserve contract?  reserve.checkQualified(msg.sender, _helpers);
+
+
+[04/12/2023 23:54] hermel007
+that's the Equity contract. It is sometimes called reserve as it holds the reserves. it can be found by calling reserve() on the Frankencoin contract.
+
+
+[04/12/2023 23:57] kartoonjoy
+Pinned a message.
+
+
+[04/13/2023 00:04] hermel007 (pinned)
+In case you wonder about the differences. From the top of my mind, the most important ones are:
+- "price" in the paper refers to the market price, whereas the variable position.price in the implementation refers to the liquidation price.
+- the minter reserve was adjusted after the paper was written and the equity share allocation is completely different. It is probably best to ignore section 3 of the paper entirely and to instead refer to the gitbook documentation and the code comments.
+- in the paper, the perspective is that you borrow 80 ZCHF but get liquidated once the collateral is worth less than (1+h)*80 = 100. In the implementation, the perspective is that you borrow the 100 ZCHF, but only get to use 80 as 20 is allocated to the reserve.
+- the paper does not care about timing questions between providing the collateral and actually minting ZCHF. It assumes that these always happen together, whereas in the implementation, providing collateral and minting ZCHF are two separate steps.
+
+{Reactions}
+fire (7) 🤝 (2) 
+
+[04/13/2023 00:06] hermel007
+overall, the paper is a good reference for the game theory behind Frankencoin, whereas the source code comments contain better information about the more subtle considerations of the actual implementation
+
+{Reactions}
+🤝 (3) 
+
+[04/13/2023 00:12] reentrant
+@kronrod ooo much thanks
+
+
+[04/13/2023 00:13] 0x_tsar
+@kronrod hey I don't know if it matters much but in the contest scope the contracts/Frankecoin.sol is linking to the github repo contracts/Position.sol
+
+{Reactions}
+thankyou 
+
+[04/13/2023 00:16] hermel007
+that's an error in the readme. I'm not sure though if the contest rules allow to change that during the contest.
+
+{Reactions}
+👍 (2) 
+
+[04/13/2023 01:18] topdev
+@kronrod  publicly known issues url not exist?
+
+
+[04/13/2023 03:35] plamablocks
+👋🏾 I have a question for the devs but would like to ask it privately first. Is there a way to do that?
+
+
+[04/13/2023 03:52] dravee
+Fixed 👍. That's just a minor typo, nothing about the scope of the contest.
+
+{Reactions}
+👍 
+
+[04/13/2023 03:59] sathish9098kumar
+Yes automated findings link not exist
+
+
+[04/13/2023 04:21] sathish9098kumar
+Post automated findings link here
+
+
+[04/13/2023 05:53] sheldonholmgren
+I'm getting CompilationError on the most recent commit. Anyone knows what's up with that?
+```
+~/targets/FrankenCoin # npx hardhat compile
+Downloading compiler 0.8.13
+CompilerError: Stack too deep when compiling inline assembly: Variable dataEnd is 1 slot(s) too deep inside the stack.
+
+
+Error HH600: Compilation failed
+```
+
+
+[04/13/2023 06:15] kowalski_analysis
+Started a thread.
+
+
+[04/13/2023 06:46] deliriusz
+Am I the only person who can't download the research paper? https://www.snb.ch/n/mmr/reference/sem_2022_06_03_maire/source/sem_2022_06_03_maire.n.pdf it won't load for me
+
+
+[04/13/2023 06:53] 0xnorman
+Oh has it posted yet or we don't have automated findings for this one? @Sathish9098
+
+
+[04/13/2023 06:54] bean.eth2
+can i ask why the anchorTime has to do this?
+
+
+[04/13/2023 06:54] bean.eth2
+```    function anchorTime() internal view returns (uint64){
+        return uint64(block.number << BLOCK_TIME_RESOLUTION_BITS);
+    }```
+
+
+[04/13/2023 06:55] bean.eth2
+where BLOCK_TIME_RESOLUTION_BITS is 24, moving block.number to the more significant 24 bits
+
+
+[04/13/2023 06:59] bean.eth2
+i think it scales the block_number to 16777216?
+
+
+[04/13/2023 07:06] kowalski_analysis
+Started a thread.
+
+
+[04/13/2023 07:10] Deleted User
+It seems like the dev wanted to shift the anchor time to the left. I dont know why
+
+
+[04/13/2023 07:10] Deleted User
+Why you mention the number 24?
+
+
+[04/13/2023 07:13] bean.eth2
+no worry i think it's a scaler only
+
+{Reactions}
+✅ (2) 
+
+[04/13/2023 07:59] eyexploit
+@kronrod  dmed
+
+
+[04/13/2023 08:22] hermel007 (pinned)
+Since there were a few questions regarding the auction mechanism, I've just pushed an update to the gitbook documentation, describing the basic idea behind the auction design in an accessible way:
+https://docs.frankencoin.com/positions/auctions
+For the hairy details, it is still best to consult the code and its comments, but this should help as an entry point.
+
+{Embed}
+https://docs.frankencoin.com/positions/auctions
+Challenges and Auctions
+Challenges and the resulting auctions are a mechanism to ensure positions are backed by sound collateral.
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/VZk862tEsr8UzL1E8fn2-B75CB.png
+
+{Reactions}
+thankyou (8) 
+
+[04/13/2023 08:40] 0xtaylor
+Think you can fill out the other missing sections?
+
+{Reactions}
+👀 
+
+[04/13/2023 09:40] 0xpathfindr
+Just thought I would point out this little spelling mistake here:
+
+https://docs.frankencoin.com/positions/auctions
+
+
+
+```no position is every accepted that is based on```
+
+should be `ever` instead of `every`
+
+
+Great explantation of how challenges and auctions work. Thanks.
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/Screenshot_2023-04-13_at_10.38.33-B4D90.png
+
+{Reactions}
+👍 
+
+[04/13/2023 09:59] sathish9098kumar
+But link not exist
+
+
+[04/13/2023 10:27] Deleted User
+Are the botted findings somewhere to be found?
+
+
+[04/13/2023 10:43] sp1cymeatball
+You can't just mint ZCHF with your position, user needs to call `suggestMinter` first?
+
+
+[04/13/2023 11:18] 0x3b
+the judges will need 24h to determine the best bot with best findings, and after that they will post the automated findings
+
+{Reactions}
+✅ (3) 
+
+[04/13/2023 11:25] Deleted User
+I got another question😅 can you submit more than one time?
+
+
+[04/13/2023 11:26] hermel007
+No, suggestMinter only needs to be called if you propose a completely new way of minting. When opening a new position through the existing MintingHub, the existing MintingHub acts as the minter.
+
+{Reactions}
+👍 (2) 
+
+[04/13/2023 11:49] proxy1967
+The position owner is the minter, correct ?
+
+
+[04/13/2023 11:59] bason91
+@levijohnson , hey, I cannot find the automated findings. Will they be available after the bot contest finishes? In previous competitions we were getting those almost immediately. Thanks.
+
+
+[04/13/2023 12:00] paroxysm9999
+Hey. There’s a change in process due to the bot race. Once the bot submissions are judged there will will be an update.
+
+
+[04/13/2023 13:02] itsmetechjay (pinned)
+Wardens, please note that the automated findings output is posted below. 
+
+These are considered publicly known issues and are not eligible for awards.
+
+**Automated findings: **
+https://gist.github.com/CodingNameKiki/36f3bfb214907d68fdf3a43cb0cb8ae3
+
+**Code4rena submission guidelines and automated findings policy: **
+https://docs.code4rena.com/roles/wardens/submission-policy#automated-findings-ineligible
+
+This will also be linked in the contest README file shortly.
+
+{Reactions}
+nice 
+
+[04/13/2023 13:02] itsmetechjay
+Pinned a message.
+
+
+[04/13/2023 13:05] thekmj
+Should be a .md file, the .txt format is barely readable
+
+{Reactions}
+👍 
+
+[04/13/2023 13:06] codingnamekiki (pinned)
+https://gist.github.com/CodingNameKiki/36f3bfb214907d68fdf3a43cb0cb8ae3
+
+{Embed}
+https://gist.github.com/CodingNameKiki/36f3bfb214907d68fdf3a43cb0cb8ae3
+AutomatedFindings.md
+GitHub Gist: instantly share code, notes, and snippets.
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/gist-og-image-17482.png
+
+
+[04/13/2023 13:06] codingnamekiki
+Here you go
+
+
+[04/13/2023 13:07] codingnamekiki
+.md file of the findings
+
+{Reactions}
+thankyou (7) 
+
+[04/13/2023 13:10] thekmj
+Wow this is an extremely detailed report, even has two medium findings based on easily overlooked ERC20s
+
+
+[04/13/2023 13:11] thekmj
+If I have any complaints then it's only a better TOC. The report is quite long, it's difficult to scroll to the section you want to look at (gas, QA/low, mediums)
+
+
+[04/13/2023 13:16] thekmj
+Oh GAS-20 is not correct because the variable is constant
+
+
+[04/13/2023 13:19] 0xpathfindr
+Hey @kronrod Added you and sent you a dm. Have a couple questions, thanks.
+
+
+[04/13/2023 13:19] alextheentreprenerd
+Half of the gas findings are not correct, even after applying a 25 point deduction, the report scored the highest in spite of the inaccuracies
+
+
+[04/13/2023 13:28] thekmj
+Aren't most of these gas findings correct but only technically?
+
+
+[04/13/2023 13:37] itsmetechjay
+Thank you!
+
+{Reactions}
+hi5 
+
+[04/13/2023 13:48] 0x3b
+is this bot gonna be used in every race? because it is really good
+
+
+[04/13/2023 13:53] jing#6535
+no more chance for newbie's low and gas report, this first shot works pretty fine
+
+
+[04/13/2023 13:55] thekmj
+:mahiroawkward: I'd say low-hanging fruits ended since the old bot already if you put it that way
+
+
+[04/13/2023 13:56] thekmj
+If anything I actually like the changes since I can submit only few but impactful findings and will get well-rewarded
+
+
+[04/13/2023 14:02] jing#6535
+Exactly, but I think newbies need some encouragement at the beginning of their journey, never mind, reality is reality, we all need to adapt to changes
+
+{Reactions}
+👍 (2) 
+
+[04/13/2023 14:04] pfapostol
+I don’t think that getting easy money in any way encourage a person to growth.
+
+
+[04/13/2023 14:06] mariodev__
+Devs, you have a typo in your frontend I think
+
+
+[04/13/2023 14:07] mariodev__
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/CleanShot_2023-04-13_at_16.06.59-D8563.png
+
+{Reactions}
+😅 
+
+[04/13/2023 14:26] .hack0
+where are the 2 M findings?
+
+
+[04/13/2023 14:26] thekmj
+At the very bottom of the report
+
+
+[04/13/2023 14:30] .hack0
+ohh okey but M-1 is already reported in the previous audit with L-6 too 😦
+
+
+[04/13/2023 14:31] ladboy233
+The findings of the previous audit that we decided not to fix should not be reported again.
+
+
+[04/13/2023 14:31] ladboy233
+When I am reading the doc I see this.
+
+
+[04/13/2023 14:31] ladboy233
+What is the findings of the previous audit?
+
+
+[04/13/2023 14:31] .hack0
+https://discord.com/channels/810916927919620096/1095308824354758696/1095829724749627424
+
+
+[04/13/2023 14:33] ladboy233
+@Jay | C4 I think this message deserves a pin.
+
+
+[04/13/2023 14:39] levijohnson
+corrected, thank you!
+
+
+[04/13/2023 14:40] ast3ros
+really love the idea about challenges and auctions to find the collateral price , very creative 🫡
+
+{Reactions}
+❤️ (2) 👍🏼 (2) 👍 (2) 
+
+[04/13/2023 15:04] itsmetechjay
+Pinned a message.
+
+
+[04/13/2023 15:05] ladboy233
+Does the equity contract fork any protocol?
+
+
+[04/13/2023 15:05] hermel007
+no
+
+
+[04/13/2023 15:19] _0xfanz
+Can i DM you ?
+
+{Reactions}
+👍 
+
+[04/13/2023 15:23] levijohnson
+corrected, thank you!
+
+{Reactions}
+✅ 
+
+[04/13/2023 15:54] _brolee
+@kronrod sent you a fr!
+
+
+[04/13/2023 15:55] 14si2o_flint
+@kronrod Am I correct in my understanding that currently, MintingHub is the only member of the `minters`  mapping and `suggestMinter`  is the only way for this mapping to expand?
+
+
+[04/13/2023 18:06] hermel007
+almost, there is a second minter installed, the StablecoinBridge.
+
+{Reactions}
+👍 (2) 
+
+[04/13/2023 18:36] sp1cymeatball
+@kronrod Do you plan to list ZCHF and CHF on major DEXes like Uniswap?
+
+
+[04/13/2023 18:38] hermel007
+Yes, once I have a version that I feel confident in
+
+{Reactions}
+👍🏾 (2) 
+
+[04/13/2023 18:42] brevist
+No. It looks like the server is down 😢 .
+
+
+[04/13/2023 18:46] 0xepley
+@kronrod dmed you
+
+
+[04/13/2023 20:52] carlitox477
+Hi! I have next error, any advice?
+```
+PS E:\Blockchain projects\C4\2023-04-frankencoin> forge test
+[⠃] Compiling...The application panicked (crashed).
+Message:  checksum not found
+Location: C:\Users\carlitox477\.cargo\git\checkouts\ethers-rs-c3a7c0a0ae0fe6be\c17c0c3\ethers-solc\src\compile\mod.rs:463
+
+
+Backtrace omitted. Run with RUST_BACKTRACE=1 environment variable to display it.
+Run with RUST_BACKTRACE=full to include source snippets.
+```
+
+
+[04/13/2023 21:04] kartoonjoy
+Pinned a message.
+
+
+[04/13/2023 21:07] hermel007
+Have you tried "forge install" ?
+
+Generally, the hardhat test suite is much more comprehensive. But many testers prefer forge so I added a basic test for that as well.
+
+
+[04/13/2023 21:09] carlitox477
+Yes I tried! But the error keeps there
+
+
+[04/13/2023 21:10] carlitox477
+hardhat works oh though
+
+
+[04/13/2023 21:10] hermel007
+no idea what it could be. I'm not familiar with forge and rust
+
+
+[04/13/2023 21:14] 0xweiss
+Had same error. I did nothing to solve it, apparently using hardhat everything compiles.
+
+{Reactions}
+👍 
+
+[04/13/2023 21:29] carlitox477
+I guess only hardhat will be
+
+
+[04/13/2023 23:08] reentrant
+If anyone hasn't seen it yet, check this thread for alternative links to the whitepaper
+
+{Reactions}
+🚀 
+
+[04/13/2023 23:08] reentrant
+https://discord.com/channels/810916927919620096/1095963161611472916
+
+
+[04/14/2023 00:02] jnrlouis
+Really detailed automated findings :thisisfine:
+
+
+[04/14/2023 01:58] birdy0219
+@carlitox477 have you tried *foundryup* to grab the latest version of the framework?
+
+
+[04/14/2023 02:02] birdy0219
+Also @carlitox477 a quick google has suggested a fix to a similar previous forge checksum error is to add a specific solc version in the *foundry.toml* file
+My version is compiling everything fine with 0.8.19 so you could add this line to *foundry.toml* ```solc_version = "0.8.19"```
+
+{Reactions}
+👍 (2) 
+
+[04/14/2023 03:59] carlitox477
+It worked! Thx!
+
+{Reactions}
+👍 
+
+[04/14/2023 06:18] veridelisi
+I cant download White paper? Broken link
+
+
+[04/14/2023 06:23] veridelisi
+Or problem in snb Web site
+
+
+[04/14/2023 06:39] eyexploit
+.
+
+
+[04/14/2023 06:50] veridelisi
+Swiss National bank server is down
+
+
+[04/14/2023 06:50] veridelisi
+Anybody sent it?
+
+
+[04/14/2023 07:01] berlin.101
+Typo in the docs @kronrod "At the of writing" -> "At the time of writing" (https://docs.frankencoin.com/positions)
+
+{Reactions}
+👍 (2) 
+
+[04/14/2023 07:02] _mundhrakeshav
+https://discord.com/channels/810916927919620096/1095963161611472916/1095968358421237782
+
+{Reactions}
+🫂 
+
+[04/14/2023 07:53] berlin.101
+Another typo in docs @kronrod : "that the the" -> " that the"  (https://docs.frankencoin.com/reserve)
+
+{Reactions}
+👍 (2) 
+
+[04/14/2023 09:35] 0x3b
+the delegateVoteTo() in Equity, does that mean if someone with more than 3% of the shares delegates the vote to someone else, and that someone to veto it?
+
+
+[04/14/2023 09:54] brevist
+Does anybody have, by any chance, a saved pdf copy of the Research Paper?
+To be fair, the cached html one does the trick, but is a bit user unfriendly.
+
+{Reactions}
+🫂 
+
+[04/14/2023 10:54] 0xjuntao
+here you go sir
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/Frankencoin-DF8A3.pdf
+
+{Reactions}
+💯 (12) 🔥 (3) 
+
+[04/14/2023 11:38] 0xjuntao
+@kronrod dmed you
+
+
+[04/14/2023 12:26] santipu_
+Hi @kronrod , I just sent you a DM for a question. Thanks for your time.
+
+
+[04/14/2023 12:47] zaevlad
+@kronrod dm you, thanks
+
+
+[04/14/2023 13:50] brevist
+Thanks a lot, bro!
+
+
+[04/14/2023 17:33] 0xweiss
+@kronrod or somebody knows in what blockchain are they going to deploy? Is frankencoin planning to go multichain like to Pol/Op or Arb?
+
+
+[04/14/2023 18:00] noamyakov
+Started a thread.
+
+
+[04/14/2023 18:11] csjaybit
+it looks like there is no more gas optimizations
+
+
+[04/14/2023 18:12] csjaybit
+bots are scary
+
+
+[04/14/2023 18:29] hermel007
+We are aiming for mainnet. what would you recommend?
+
+
+[04/14/2023 18:31] eme0242
+Arbitrum
+
+
+[04/14/2023 18:31] 0xweiss
+It's not that much that I have a recommendation, but I wanted to know because it is important for some findings.  If there is the possibility to expand to other blockchains even if you do not know please point it out🤗
+
+{Reactions}
+👍 
+
+[04/15/2023 06:40] eyexploit
+what is the votes anchor?  is at many places in Equity
+
+
+[04/15/2023 06:46] Deleted User
+But the contracts can be tested on the Eth mainnet am I correct??
+
+
+[04/15/2023 07:08] hermel007
+Yes, I deployed them on mainnet and linked them to the frontend on frankencoin.com
+
+
+[04/15/2023 07:09] hermel007
+It is used to calculate the time-weighted votes. If you have been holding 10 shares on the same address for 20 blocks, you have 200 votes, for example.
+
+{Reactions}
+thankyou (4) 
+
+[04/15/2023 07:09] hermel007
+yes, it is conceivable that we will also deploy this on other evm chains
+
+{Reactions}
+🔥 (2) 
+
+[04/15/2023 07:10] hermel007
+of course, we would need to be careful with the block-based timelock in that case
+
+
+[04/15/2023 07:24] kodyvim
+@kronrod  DMed you
+
+
+[04/15/2023 07:50] proxy1967
+Where are you planning to deploy ?
+
+
+[04/15/2023 08:23] eyexploit
+@kronrod dmed
+
+
+[04/15/2023 09:16] csjaybit
+initialCollateral: the initial amount of collateral. It will be automatically transferred to the newly created position during the call. As the minting hub is executing the transfer, an according allowance must be present. @kronrod  I dont understand 2nd sentence
+
+
+[04/15/2023 09:25] hermel007
+before opening the position, the caller must set an ERC20 allowance in another transaction, i.e. collateral().approve(mintinghub, initialCollateral)
+
+
+[04/15/2023 09:30] csjaybit
+thank you
+
+
+[04/15/2023 10:17] amaechieth
+@kronrod Dmed
+
+
+[04/15/2023 11:10] norah7603
+@kronrod DMed
+
+
+[04/15/2023 14:15] ubl4nk#1934
+`it("minter of XCHF-bridge should receive ZCHF", async () => {
+            let amount = floatToDec18(5000);
+            let balanceBefore = await ZCHFContract.balanceOf(owner);
+            // set allowance
+            await mockXCHF.connect(accounts[0]).approve(bridge.address, amount);
+            await bridge.connect(accounts[0])["mint(uint256)"](amount);
+            await mockXCHF.connect(accounts[0]).transferAndCall(bridge.address, amount, 0);
+            let balanceXCHFOfBridge = await mockXCHF.balanceOf(bridge.address);
+            let balanceAfter = await ZCHFContract.balanceOf(owner);
+            let ZCHFReceived = dec18ToFloat(balanceAfter.sub(balanceBefore));
+            let isBridgeBalanceCorrect = dec18ToFloat(balanceXCHFOfBridge)==10000;
+            let isSenderBalanceCorrect = ZCHFReceived==10000;
+            if (!isBridgeBalanceCorrect || !isSenderBalanceCorrect) {
+                console.log("Bridge received XCHF tokens ", dec18ToFloat(balanceXCHFOfBridge));
+                console.log("Sender received ZCH tokens ", ZCHFReceived);
+                expect(isBridgeBalanceCorrect).to.be.true;
+                expect(isSenderBalanceCorrect).to.be.true;
+            }
+        });`
+
+
+[04/15/2023 14:16] ubl4nk#1934
+1 Xchf =? 2 ZCHF ?
+
+
+[04/15/2023 14:16] ubl4nk#1934
+According to this test
+
+
+[04/15/2023 14:16] hermel007
+it mints teh 5000 two times
+
+
+[04/15/2023 14:16] hermel007
+here: await bridge.connect(accounts[0])["mint(uint256)"](amount);
+
+
+[04/15/2023 14:16] hermel007
+and here: await mockXCHF.connect(accounts[0]).transferAndCall(bridge.address, amount, 0);
+
+
+[04/15/2023 14:16] hermel007
+together, it is 10000
+
+
+[04/15/2023 14:16] hermel007
+testing both ways of minting in this test
+
+
+[04/15/2023 14:17] ubl4nk#1934
+yes right, thanks for advance helps
+
+
+[04/15/2023 14:17] hermel007
+no problem
+
+
+[04/15/2023 14:41] markusk0x
+@kronrod DMed
+
+
+[04/15/2023 15:24] plamablocks
+@kronrod Is there a chance in the future that a EOA could have multiple delegates give them their voting power?
+
+
+[04/15/2023 15:29] hermel007
+yes, there could even be chains of delegation
+
+
+[04/15/2023 15:35] hermel007
+some wardens approached me about the Frankencoin.suggestMinter function and the totalSupply == 0 check. The idea here is that as long as total supply is 0, this was freshly deployed and the deployer should be able to immediately add the first minters without paying a fee or having to wait. after that, the deployer should mint the first ZCHF and henceforth a fee and a waiting period is necesary to suggest a minter.
+
+{Reactions}
+👍 
+
+[04/15/2023 16:51] raymondfam
+What is the benefit of becoming a minter?
+
+{Reactions}
+👍 
+
+[04/15/2023 18:13] crc32#4377
+You can not be a minter , you can only suggest your minting mechanism to the DAO and they will decide that it should be added or not ? @kronrod am right ?
+
+{Reactions}
+👍 (2) 
+
+[04/15/2023 18:19] eyexploit
+once approved, you can then.
+
+
+[04/15/2023 18:20] levijohnson
+Yes, you can propose a collateral against minting ZCHF. 
+You’d want to become a minter if you want to make use of a decentralized Swiss Franc stablecoin for various reasons
+
+
+[04/15/2023 18:49] eyexploit
+hey @kronrod, what partially challenge mean here?
+
+
+[04/15/2023 18:49] eyexploit
+```    function notifyChallengeStarted(uint256 size) external onlyHub {
+        // require minimum size, note that collateral balance can be below minimum if it was partially challenged before
+        if (size < minimumCollateral && size < collateralBalance()) revert ChallengeTooSmall();
+        challengedAmount += size;
+    }```
+
+
+[04/15/2023 18:55] toonvh
+A previous challenge may have taken place that only took part of the postitions collateral
+
+{Reactions}
+👍 (2) 
+
+[04/15/2023 19:27] pheonix244001
+does zchf.equity() returns reserve or supply ?
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/image-88C91.png
+
+
+[04/15/2023 20:25] hermel007
+equity() returns the total reserve minus the minter's reserve. If Frankencoin was a bank, this would be the equity capital in the balance sheet.
+
+{Reactions}
+👍 (2) 
+
+[04/15/2023 22:45] 0xbtk
+@kronrod sent you a request
+
+{Reactions}
+👍 
+
+[04/16/2023 02:44] tamayonft
+Why you wanna clone a position?
+
+
+[04/16/2023 03:24] 0xjuntao
+because I am poor and cannot afford to create a new one😂
+
+{Reactions}
+😂 (2) 
+
+[04/16/2023 04:00] 0xstalin
+short answer is that opening new positions is kinda complicated and each new position requires going through a settlement time
+cloning a position from a position that is not challenged is done immediately
+
+{Reactions}
+👍 
+
+[04/16/2023 04:30] tamayonft
+Sorry it's just that it's my first stable Coin that I look up I just trying to figure out what it's challenge for
+
+{Reactions}
+🦾 
+
+[04/16/2023 04:33] 0xstalin
+nothing to be sorry for sir, we are all here to learn
+Challenge is a mechanism that allows the system to get rid of bad positions
+A position is considered to be a bad one when the value of its collateral is less than the value of what it borrowed
+
+
+[04/16/2023 04:58] tamayonft
+oh got it
+
+
+[04/16/2023 04:58] tamayonft
+its like liquidation
+
+
+[04/16/2023 05:28] 0xstalin
+if the challenge is not averted yep, the position proceeds to be liquidated
+
+
+[04/16/2023 05:40] tamayonft
+thanks a lot sr
+
+
+[04/16/2023 08:34] csjaybit
+dmed
+
+
+[04/16/2023 08:36] csjaybit
+why bidder and challanger are different? whats role of bidder? doesnt challanger just pays collateral he offers
+
+
+[04/16/2023 08:59] hermel007
+the challenge is the one triggering the auction. the challenger basically says: I do not believe this collateral is as valuable as the position owner claims, and to prove it, I put up the same collateral for sale in an auction.
+
+Then the bidders come in and start bidding. And if the highest bid is indeed below the value that the position owner provided, the challenger wins.
+
+{Reactions}
+👍 (7) 
+
+[04/16/2023 09:56] csjaybit
+if challanger fails? also what happens when position expires?
+
+
+[04/16/2023 09:57] csjaybit
+there is no mention of liquidation price here? whats purpose of that?
+
+
+[04/16/2023 10:57] 0xsurena
+for value of collateral  in position
+
+
+[04/16/2023 10:58] 0xsurena
+https://docs.frankencoin.com/
+
+{Embed}
+https://docs.frankencoin.com/
+Motivation
+Why did we create an oracle-free, decentralized, Swiss Franc stablecoin?
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/DL79g9F2voPSkPXydEp2-33924.png
+
+
+[04/16/2023 11:12] hermel007
+If the challenge fails, that means that there was a bidder that is willing to pay the liquidation price for the collateral. In that case, the bidder gets the collateral provided by the challenger and the challenger gets the bid. The owner of the position is completely unaffected.
+This changes if the position has expired: in that case, every challenge succeeds which essentially means that the collateral is sold to the highest bidder and the system makes a nice profit.
+
+{Reactions}
+👍 
+
+[04/16/2023 11:12] hermel007
+the liquidation price is the price stored in position. if the highest bid is higher, the challenge is averted. if the highest bid is lower, the challenge succeeds.
+
+
+[04/16/2023 11:16] csjaybit
+nice feels like my brain is becoming big
+
+{Reactions}
+😄 (8) 
+
+[04/16/2023 13:43] evokid
+@kronrod Dmed you
+
+
+[04/16/2023 14:44] 0xstalin
+@kronrod dmed you sir 🫡
+
+
+[04/16/2023 17:00] ivok1#4124
+If the challenger wins, what will happen on the position?
+
+
+[04/16/2023 17:25] hermel007
+If the challenger wins, the collateral of the position is being sold to the highest bidder. And if there is no collateral left, the position is sent into eternal cooldown in internalWithdrawCollateral() such that nothing can be minted any more.
+
+
+[04/16/2023 19:39] vic_43
+same here,thank you for asking that !!!
+
+
+[04/16/2023 20:48] christina0494
+@kronrod dm
+
+
+[04/17/2023 05:00] PrasadLak#0622
+@kronrod dmed
+
+
+[04/17/2023 05:40] _mundhrakeshav
+What happens when the liquidation auction ends with no bid? @kronrod
+
+
+[04/17/2023 06:16] lil_eth
+I think then the first one to call the end() function gets the collateral of the challenger ?
+
+
+[04/17/2023 06:36] _mundhrakeshav
+@kronrod @levijohnson is that the case?
+
+
+[04/17/2023 08:10] dishwasher84
+Any reason that the Bridge Reserve documentation is empty? @kronrod
+
+
+[04/17/2023 08:35] veridelisi
+@kronrod it is very very confused code and theoric base. I give up
+
+{Reactions}
+😂 (12) 
+
+[04/17/2023 09:06] dishwasher84
+In the Alice example of the auction documentation (https://docs.frankencoin.com/positions/auctions), Alice would keep the ZCHF she minted, if a challenge to the pool succeeds right?
+In that case, the opening of the unsound position would have been profitable for her, if the net gain she made is higher than the fees she had to pay for opening the position. Is my understanding correct? @kronrod
+
+
+[04/17/2023 09:17] trustone_
+I think u understand correctly
+
+{Reactions}
+👍🏼 
+
+[04/17/2023 09:21] berlin.101
+Any particular reason why INFINITY is set to "1 << 255" in https://github.com/code-423n4/2023-04-frankencoin/blob/main/contracts/ERC20.sol#L47 and not "type(uint256).max" @kronrod ?
+
+{Reactions}
+👍🏼 (3) 
+
+[04/17/2023 11:37] berlin.101
+@kronrod dmed 🙂
+
+
+[04/17/2023 12:00] hermel007
+Yes, explanation is here: https://www.aktionariat.com/documentation/infinite-erc-20-allowances
+
+{Embed}
+https://www.aktionariat.com/documentation/infinite-erc-20-allowances
+Infinite ERC-20 allowances - Aktionariat
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/61d47266ff8dcb1e0f515900_aktionariat-open--EA986.jpg
+
+{Reactions}
+chefskiss (4) cheers_badger 
+
+[04/17/2023 13:23] berlin.101
+Got it. Thanks! A small hint in the code would help. Judging from the 👍 my comment received there were multiple people with the same question.
+
+
+[04/17/2023 13:34] m9800
+@kronrod dmed
+
+
+[04/17/2023 15:27] eyexploit
+Is there any another way for owner to close his position 😲 !! I think the only way I see is by withdrawing collateral that's too even possible when nochallenge exists.
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/Screenshot_2023-04-17_205224-B03BE.png
+
+
+[04/17/2023 15:52] Ace-30#3151
+@kronrod dmed
+
+
+[04/17/2023 15:53] janestebans
+I believe you are right, the only way to close a position is by withdrawing all the collateral, although having the position denied I think it also renders it dead.
+
+
+[04/17/2023 15:59] eyexploit
+yep, denying position can only be done during initalization period, here it trying to avert challenge so I assume the intialization period over and position approved. I don't see how there's a way for minter to close his position as mention in comment.
+
+
+[04/17/2023 16:01] janestebans
+I think the comment tries to say that it wants to avoid the owner of the open position to mint the frankencoin to give a bit more of time so somebody else can open another challenge in this position. That is my take, but I can be wrong, this contract is kinda convoluted
+
+
+[04/17/2023 16:06] eyexploit
+thanks👍, got some new insights
+
+{Reactions}
+👍🏼 
+
+[04/17/2023 16:09] PrasadLak#0622
+@levijohnson Dmed
+
+
+[04/17/2023 16:11] t1moh
+@levijohnson DMed you
+
+
+[04/17/2023 16:33] santipu_
+@kronrod DMed
+
+
+[04/17/2023 18:35] acegawd
+check dm @kronrod.
+
+
+[04/17/2023 18:39] 0xtraub
+Is there any kind of bond or something the challenger has to put up before starting an auction
+
+
+[04/17/2023 19:27] Ace-30#3151
+@levijohnson check dm plz
+
+
+[04/17/2023 21:13] kartoonjoy (pinned)
+Hi @🐺wardens please take a moment to review the new comment added to the Automated Findings report (https://discord.com/channels/810916927919620096/1095308824354758696/1096057727077322862). This provides the judge's (Alex) feedback re: the gas report findings and might be helpful to your submissions.
+
+{Embed}
+https://discord.com/channels/810916927919620096/1095308824354758696/1096057727077322862).
+Discord - A New Way to Chat with Friends & Communities
+Discord is the easiest way to communicate over voice, video, and text.  Chat, hang out, and stay close with your friends and communities.
+
+
+[04/17/2023 21:30] kartoonjoy
+Pinned a message.
+
+
+[04/17/2023 21:43] hunter_w3b
+If any gas finding is NC can we report in gas optimization report like a lot of in feedback of (Alex) comment is said nc?
+
+
+[04/17/2023 21:45] kartoonjoy
+Hi @Alex The Entreprenerd. Can you confirm this when available, please?
+
+
+[04/18/2023 01:21] rm_rf.
+What does NC mean?
+
+
+[04/18/2023 01:52] 8olidity#8520
+@kronrod   dmed
+
+
+[04/18/2023 02:07] 0xbtk
+Non Critical
+
+
+[04/18/2023 02:47] rm_rf.
+That makes sense hehe thanks
+
+{Reactions}
+🤍 
+
+[04/18/2023 03:29] 0xstalin
+The collateral that the challenger will be offering on the auction.
+If a bidder averts the challenge, it will get the challenger's collateral
+
+
+[04/18/2023 05:38] _mundhrakeshav
+@kronrod
+
+
+[04/18/2023 06:48] alextheentreprenerd
+I used NC for Low Impact (less than 100) gas savings
+And gave it a Low for High Impact savings
+
+This is to allow comparing QA and Gas for bots
+
+Normal reports are scored separately
+
+{Reactions}
+👍 
+
+[04/18/2023 07:13] 0xrizwan
+@Alex The Entreprenerd What about disputing comments? Is it rejected or can we consider these in gas reports?
+
+
+[04/18/2023 07:20] alextheentreprenerd
+If I disputed a finding from the bot, it means I disagree or think it's invalid
+
+If you want to ask me about few, do a thread and I'll send you more details
+
+
+[04/18/2023 09:21] hermel007
+Then it is assumed that the highest bid was 0 and that the market price of the collateral is also 0
+
+
+[04/18/2023 09:28] zaevlad
+hey, I was trying to visit github repo (https://github.com/code-423n4/2023-04-frankencoin) but got 404 error. Is it closed now?
+
+
+[04/18/2023 09:29] hermel007
+error is 500, so I think it is an internal github problem
+
+
+[04/18/2023 09:29] t1moh
+I also having error
+
+
+[04/18/2023 09:29] zaevlad
+hmm, yea, now it's 500
+
+
+[04/18/2023 09:32] t1moh
+Works now
+
+
+[04/18/2023 10:57] nemveer
+@kronrod DMed you
+
+
+[04/18/2023 12:03] csjaybit
+@kronrod dmed you
+
+
+[04/18/2023 12:25] 0xsurena
+can  i send you DM ?
+
+
+[04/18/2023 12:34] hermel007
+yes
+
+{Reactions}
+❤️ 
+
+[04/18/2023 14:45] escrow1337
+@kronrod added
+
+
+[04/18/2023 16:29] carlitox477
+@kronrod I sent u a DM
+
+
+[04/18/2023 18:42] bizzyvinci
+* @kronrod , are there places where this mint function is used or planned to be used?
+https://github.com/code-423n4/2023-04-frankencoin/blob/1022cb106919fba963a89205d3b90bf62543f68f/contracts/Frankencoin.sol#L165
+
+* MintingHub and StablecoinBridge contract are the minters available, right?
+
+{Embed}
+https://github.com/code-423n4/2023-04-frankencoin/blob/1022cb106919fba963a89205d3b90bf62543f68f/contracts/Frankencoin.sol
+2023-04-frankencoin/Frankencoin.sol at 1022cb106919fba963a89205d3b9...
+Contribute to code-423n4/2023-04-frankencoin development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/6fa3c1d1-d7d9-43d4-86a5-3c1883026560-37B3A
+
+
+[04/18/2023 18:59] 0xstalin
+check the MintingHub & Positions contract, I don't remember exactly which of the two contracts call that mint() function
+
+{Reactions}
+👍 
+
+[04/18/2023 19:00] bizzyvinci
+Right. I somehow missed it. Thanks.
+
+
+[04/18/2023 20:49] acegawd
+Are you available via DM @0xStalin ?
+
+
+[04/18/2023 21:09] 0xstalin
+sure, happy to help on anything I could
+
+
+[04/19/2023 15:17] reentrant
+Started a thread.
+
+
+[04/19/2023 20:02] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens  The **Frankencoin** contest is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a Contest Admin if you have questions along the way!
+
+{Reactions}
+👍 (11) 🎉 (6) 
+
+[04/19/2023 20:02] decade8795
+Hello, has anybody faced site issues?
+
+
+[04/19/2023 20:02] decade8795
+I was not able to submit my last report. 
+Whom should I connect with?
+
+
+[04/19/2023 20:03] decade8795
+@Paroxysm | C4
+
+
+[04/19/2023 20:04] decade8795
+@kronrod
+
+
+[04/19/2023 20:05] hermel007
+not me 🙂
+
+
+[04/19/2023 20:06] 0xjuancito
+Fun contest. The best for the future of the protocol!
+
+{Reactions}
+👍 (6) 
+
+[04/19/2023 20:11] itsmetechjay
+responded via DM.
+
+
+[04/19/2023 20:12] kodyvim
+Thank you @kronrod for answering all my silly questions 😂
+
+
+[04/19/2023 20:12] hermel007
+thanks
+
+
+[04/19/2023 20:12] hermel007
+no problem 🙂
+
+
+[04/19/2023 20:12] decade8795
+@kronrod dmed
+
+
+[04/19/2023 20:12] 0xstalin
+A very interesting codebase, all the math & finance theory behind the project is very interesting, I like seeing how the protocol applies the free-market rules on the positions and challenges, my best wishes for the future of the protocol 🚀
+
+{Reactions}
+🔥 (7) 
+
+[04/19/2023 20:12] 0xarz
+best of luck in the future @kronrod 🫡
+
+{Reactions}
+❤️ (4) ➕ 
+
+[04/19/2023 20:13] hermel007
+thanks! Much appreciated!
+
+{Reactions}
+❤️ (2) 
+
+[04/19/2023 22:16] coffiasd
+Goooood morning
+
+
+[04/19/2023 22:49] levijohnson
+thanks everyone for the great work and help! Really appreciated! 🙏
+
+{Reactions}
+💜 (2) 
+
+[04/19/2023 23:00] _oceansky
+Thank you for this project. Learned a lot on how algorithmic stablecoin works, governance and all.
+
+{Reactions}
+👍 
+
+[04/19/2023 23:39] ast3ros
+OMG 😱 , I thought the deadline was tomorrow. Not yet submit any of my findings.
+
+{Reactions}
+ohno (8) 
+
+[04/19/2023 23:39] ast3ros
+One of the coolest things about the protocol is that it uses heavily game theory to keep everyone on their best behavior. When I saw that it only had 949 lines of code, I thought it would be easy to understand, but then realised I was very wrong.
+
+{Reactions}
+😂 (4) 
+
+[04/19/2023 23:41] ast3ros
+Anyway, this has been a great  experience reading your code. Wish you all the best with the protocol.
+
+
+[04/20/2023 00:37] reentrant
+So real 😅 Reading the site docs, the whitepaper, the code, and sketching were so so necessary.. definitely a stretch for my current skillset
+
+{Reactions}
+🙏 (2) 
+
+[04/20/2023 00:37] reentrant
+agreed!
+
+{Reactions}
+hi5 (2) 
+
+[04/20/2023 05:19] kartika___
+Same here🤣
+
+{Reactions}
+😂 
+
+[04/20/2023 05:37] 0xjuliaaa
+Agreed! The game theory under the hood is a lot fun to read and understand. And it takes quite a while for me to understand somehow. 
+Wanna say good luck to the team and want to see how it will work in real world. @kronrod
+
+{Reactions}
+👍 (3) 1_ 
+
+[04/20/2023 11:22] 0xpathfindr
+Thanks @kronrod very responsive throughout. All the best
+
+{Reactions}
+🫡 ❤️ 
+
+[04/21/2023 18:13] 0xsyntellect
+Hi all, does zchf minting supposed to work on positions created via MintHub only ?
+
+In foundry, I managed to mint zchf by creating a position via MintHub.
+
+However when I create a position outside of MintHub and try to mint zchf by calling Position.mint() it reverts with ""EvmError: Revert""
+
+Not sure if this is the right place for noob questions but I would greatly appreciate some guidance🙏
+
+
+[04/21/2023 18:53] 0xstalin
+yeah, zchf minting is supposed to work only if a valid minter is the one calling the mint() function
+A valid minter can be the MintinHub contract, an authorized bridge ...
+
+Hope you are working on it because of fun, the contest has already ended 🙂
+
+{Reactions}
+💯 
+
+[04/22/2023 22:05] 0xsyntellect
+Thanks for the help! Yes I am aware contest has ended, just trying to improve my auditing skills 🙂
+
+{Reactions}
+🚀 (4) 
+
+[04/23/2023 03:13] pppf00l
+My auditing skills is so poor. 🥲
+
+
+[04/23/2023 23:30] ihtishamsudo
+You’ll get it mate don’t worry🤝
+
+{Reactions}
+👆 (7) 
+
+[04/24/2023 09:42] hex_sadeeq
+.
+
+
+[05/01/2023 00:27] 0x1527
+Are the audit findings for Frankencoin published? If not, when can we expect them to be published?
+
+
+[05/01/2023 00:40] 0xvolodya
+A month after the end
+
+
+[05/01/2023 03:34] 0x1527
+Thank you 👍
+
+
+[05/15/2023 08:04] angry_mustache_man
+Any update on this one??
+
+
+[05/15/2023 08:09] 0xstalin
+probably tomorrow or next week will get some updates, the past Monday this contest was moved to the "Judging" section
+https://discord.com/channels/810916927919620096/810929015509483554/1105152134758015128
+
+
+[05/18/2023 06:09] christina0494
+gm, quick question: wen?
+
+
+[05/18/2023 12:12] evokid
+Here .. @ChrisTina
+
+
+[05/23/2023 10:44] yellowbirby
+Sune
+
+
+[05/24/2023 01:35] coffiasd
+👍🏻
+
+
+[05/25/2023 23:52] liveactionllamac4
+:code4rena: 💸 🎉 Awards for **Frankencoin**:
+
+$6,945.35 USDC » @__141345__ 
+$6,748.71 USDC » @JGcarv 
+$4,388.24 USDC » @cccz 
+$3,318.21 USDC » @bin2chen 
+$2,537.21 USDC » @mahdikarimi 
+$2,047.29 USDC » @0xWaitress
+$2,047.21 USDC » @3th 
+$1,629.58 USDC » @giovannidisiena 
+$1,036.46 USDC » @J4de 
+$981.18 USDC » @tallo 
+$933.75 USDC » @John 
+$872.96 USDC » @juancito 
+$832.81 USDC » @MiloTruck 
+$772.73 USDC » @RaymondFam 
+$700.83 USDC » @A710710N 
+$569.32 USDC » @peakbolt 
+$525.93 USDC » @rbserver 
+$464.20 USDC » @Udsen 
+$463.75 USDC » @berlin.101 
+$420.57 USDC » @Tricko 
+$414.80 USDC » @carrotsmuggler 
+$411.01 USDC » KIntern_NA ( @TrungOre & @duc )
+$391.66 USDC » @0xWeiss 
+$355.34 USDC » @c3phas 
+$306.44 USDC » @yixxas 
+$306.44 USDC » @DedOhwale (GMT-7) 
+$306.44 USDC » V_B ( @Barichek & @Vlad B | zkSync )
+$304.86 USDC » @Proxy 
+$304.86 USDC » @Breeje 
+$295.94 USDC » @Sathish9098 
+$273.34 USDC » @Noam Yakov 
+$273.34 USDC » @JCN 
+$273.34 USDC » @Raihan 
+$273.34 USDC » @hunter_w3b 
+$264.54 USDC » @nobody2018 
+$252.00 USDC » @Nyx 
+$231.96 USDC » @BenRai 
+$223.72 USDC » @Ace-30 
+$223.72 USDC » @mov 
+$210.94 USDC » @ChrisTina 
+$199.25 USDC » @yellowBirdy 
+$192.79 USDC » @GreedyGoblin 
+$176.12 USDC » @joestakey 
+$153.27 USDC » @Norah 
+$149.55 USDC » @santipu_ 
+$136.74 USDC » @DishWasher 
+$123.68 USDC » @Emmanuel 
+$118.00 USDC » @said 
+$116.85 USDC » @0xladboy | Sparkware 
+$115.79 USDC » @ToonVH 
+$115.71 USDC » SolidityATL ( @plasmablocks & @wzrdK3lly )
+$104.32 USDC » @peanuts
+
+{Reactions}
+🎉 (7) 👀 (2) 
+
+[05/25/2023 23:52] liveactionllamac4
+$97.17 USDC » @Kumpa 
+$94.94 USDC » @Ruhum 
+$90.27 USDC » @deliriusz 
+$84.44 USDC » @0xDACA 
+$82.94 USDC » @0xSurena 
+$79.42 USDC » @Lirios  
+$68.90 USDC » @T1MOH 
+$57.66 USDC » @jangle 
+$56.51 USDC » @deadrosesxyz 
+$56.51 USDC » @rvierdiiev 
+$56.44 USDC » @LegendFenGuin 
+$56.44 USDC » @DadeKuma 
+$56.44 USDC » @zaevlad 
+$56.44 USDC » @ltyu 
+$56.44 USDC » @foxb868 
+$56.44 USDC » @m9800 
+$50.95 USDC » @lil_eth 
+$50.88 USDC » @carlitox477 
+$43.72 USDC » @decade 
+$43.70 USDC » @karanctf 
+$43.70 USDC » @code-cipher 
+$43.63 USDC » @0xhacksmithh 
+$43.63 USDC » @Polaris_tow  
+$43.63 USDC » @Santiago Moreno 
+$43.63 USDC » @ICP 
+$43.63 USDC » @0xnev 
+$43.63 USDC » @0xSmartContract 
+$43.63 USDC » @codeslide 
+$43.63 USDC » @matrix_0wl 
+$43.63 USDC » @NiSeR 
+$43.63 USDC » @xmxanuel  
+$43.63 USDC » @slvDev 
+$43.63 USDC » @nadin 
+$43.63 USDC » @Aria 
+$43.63 USDC » @MohammedRizwan 
+$36.76 USDC » @Josiah 
+$35.06 USDC » @vakzz 
+$35.06 USDC » @117|11 
+$35.06 USDC » @SpicyMeatball 
+$35.06 USDC » @bughunter007 
+$35.06 USDC » @shalaamum 
+$33.83 USDC » @hihen 
+$33.83 USDC » @7siech 
+$28.28 USDC » @Diana 
+$22.68 USDC » @ravikiranweb3 
+$22.68 USDC » @0xpathfindr 
+$22.68 USDC » @RedTiger Auditor 
+$22.68 USDC » @volodya 
+$22.68 USDC » @kodyvim 
+$22.68 USDC » @0x3b 
+$22.68 USDC » @jasonxiale 
+$22.68 USDC » @anodaram 
+$22.68 USDC » parlayan_yildizlar_takimi ( @ulas & @caglankaan )
+$22.68 USDC » @Arz 
+$22.68 USDC » @ak1 
+$22.68 USDC » @EloiManuel 
+$22.60 USDC » @Haipls 
+$22.60 USDC » @Hama  
+$22.60 USDC » @crc32 
+$22.60 USDC » @boredpukar 
+$22.60 USDC » @georgits 
+$22.60 USDC » @shealtielanz 
+$22.60 USDC » @0x73696d616f 
+$22.60 USDC » @cryptonue 
+$22.60 USDC » @0xStalin  
+$22.60 USDC » @eyexploit 
+$22.60 USDC » @8olidity 
+$22.60 USDC » @MaanVad3r 
+$22.60 USDC » @0xbepresent 
+$22.60 USDC » @pipoca 
+$22.60 USDC » @Jorgect  
+$22.60 USDC » @wonjun 
+$22.60 USDC » @p0wd3r 
+$22.60 USDC » @bauer6009 
+$22.60 USDC » UniversalCrypto ( @amaechi eth & @tettehnetworks )
+$22.60 USDC » @descharre 
+$22.60 USDC » @Lewis Broadhurst 
+$22.60 USDC » @jcfichtner 
+$22.60 USDC » @evmboi32  
+$22.60 USDC » BGSecurity ( @anonresearcher & @martin | Founder @ ShieldifySec)
+$22.60 USDC » @0xcatellatech 
+$22.60 USDC » @BitsOrBytes 
+$22.60 USDC » @ryanranran 
+$22.60 USDC » @masa 
+$22.60 USDC » @ayden 
+$22.60 USDC » @btk 
+$22.60 USDC » @Bauchibred 
+$22.60 USDC » @tsar 
+$22.60 USDC » @0xNorman 
+$22.60 USDC » @0xbrett8571 
+$22.60 USDC » Inspex ( @Resistor, @jokopoppo, @DeStinE21, @mimic_f, @rugsurely, @ErbaZZ, and @rxnnxchxi )
+$22.60 USDC » @ADM  
+$22.60 USDC » @MogiBlack 
+$22.60 USDC » @Krace 
+$22.60 USDC » @iceBear 
+$22.60 USDC » smaul0 ( @smaul & @Mbabattya )
+$22.60 USDC » @0x007
+
+{Reactions}
+❤️ 
+
+[05/25/2023 23:52] liveactionllamac4
+$22.60 USDC » @0xTheC0der 
+$22.60 USDC » @LeoGold  
+$22.60 USDC » CodeFoxInc ( @thurendous, @TerrierLover, and @retocrooman)
+$22.60 USDC » @sces60107 | GimelSec 
+$22.60 USDC » @3dgeville 
+$22.60 USDC » @SanketKogekar 
+$22.60 USDC » ChainHunters ( @Zer0Luck, @junan, @hyeon, and @nugurii0)
+$22.60 USDC » @Madalad 
+$22.60 USDC » @aashar  
+$22.60 USDC » @tnevler 
+$22.60 USDC » @qpzm 
+$22.60 USDC » @Kaysoft 
+$22.60 USDC » @jayfromthe13th 
+$22.60 USDC » @0xBeirao 
+$22.60 USDC » @pontifex 
+$22.60 USDC » @sorryNotsorry 
+$22.60 USDC » @lukris02 
+$22.60 USDC » @sashik_eth 
+$22.60 USDC » @d3e4 
+$22.60 USDC » @0xAgro 
+$21.10 USDC » @Satyam_Sharma 
+$21.03 USDC » @0xRB 
+$21.03 USDC » @petrichor🦖 
+$21.03 USDC » @sebghatullah 
+$21.03 USDC » @trysam2003 
+$21.03 USDC » @pfapostol  
+$21.03 USDC » @SAAJ 
+$21.03 USDC » @Erko  
+$21.03 USDC » @ReyAdmirado 
+$21.03 USDC » @Rageur  
+$21.03 USDC » @EvanW  
+$21.03 USDC » @naman1778  
+$0.07 USDC » @HaCk0  
+$0.07 USDC » @markus_ether  
+$0.07 USDC » @Juntao🐾  
+$0.07 USDC » @Jiamin 
+$0.07 USDC » @circlelooper  
+$0.07 USDC » @Mukund 
+$0.07 USDC » @PNS 
+$0.07 USDC » @Lalanda 
+$0.07 USDC » @Bitspinner 
+$0.07 USDC » @zzebra83 
+$0.07 USDC » @kenta 
+$0.07 USDC » BPZ ( @pa6221, @Bitcoinfever244, and @PrasadLak)
+$0.07 USDC » @zhuXKET  
+$0.07 USDC » @Jerry0x 
+$0.07 USDC » @marwen  
+$0.07 USDC » @silviaxyz  
+$0.07 USDC » @0xhadexploit 
+$0.07 USDC » @lukino (∞) 
+
+🏁 Findings summary
+---------------------------
+High risk findings: 38 total, 6 unique
+Med risk findings: 139 total, 15 unique
+Gas reports: 43
+QA reports: 137
+
+Awards will be distributed on Polygon within the next week. Congratulations, everyone! 💸 💸 💸
+
+Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.
+
+{Reactions}
+hi5 (10) C4Keycap 😂 (4) 
+
+[05/26/2023 03:38] shealtielanz
+thanks alot, my first ever win, more to come🔥🔥🔥
+
+{Reactions}
+🎉 (13) C4Keycap (4) 
+
+[05/26/2023 03:38] shealtielanz
+I'm sooo happy
+
+
+[05/26/2023 03:59] raihan3727
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/first-time-meme-first-time-4D62E.mp4
+
+{Reactions}
+😅 (3) 
+
+[05/26/2023 05:25] 0xbrett8571
+My very first win ever 💸🥰.
+I started my SCA journey early January this year, and literally participated in almost every contest, upon all the failures, I refuse to give up, I keep learning and pushing knowing that one day I’ll succeed, and yes I’m so excited and this gives me confidence to do more: Thank you 😊 🙏.
+
+{Reactions}
+🎉 (22) C4Keycap (10) 
+
+[05/26/2023 05:54] cloudellie
+Congratulations!
+
+
+[05/26/2023 05:55] cloudellie
+Congrats and glad you're here!
+
+
+[05/26/2023 06:11] 0xbrett8571
+Thank you for your kind words earlier 🫡
+
+{Reactions}
+hi5 (3) 
+
+[05/26/2023 07:07] christina0494
+gm... Sorry to be a pain but I'm feeling severely underpaid on this. I submitted a valid 0-day-vulnerability for this contest which could have caused a huge loss for the protocol. Informed the sponsor because the contract was deployed to mainnet already with 100k basically up for grabs. During that conversation, I was told I was the first one to find this issue. So anyway, I got 210$.... This really doesn't seem right (or if it is, where's the incentive for wardens to report these kind of issues?)
+
+{Reactions}
+😞 
+
+[05/26/2023 07:08] eme0242
+A lot of people probably reported the same issue
+
+
+[05/26/2023 07:15] christina0494
+yeah might be...
+
+
+[05/26/2023 07:15] shealtielanz
+Come back stronger another day🔥
+
+{Reactions}
+💜 
+
+[05/26/2023 07:22] christina0494
+Thanks but it would be really nice to receive some feedback first before moving straight to acceptance 😂
+
+
+[05/26/2023 07:23] proxy1967
+When can we expect the report?
+
+
+[05/26/2023 07:24] hermel007
+I'll PM you, your early report was indeed very helpful
+
+
+[05/26/2023 07:30] hex_sadeeq
+Maybe it isn't unique
+
+
+[05/26/2023 07:32] hermel007
+It wasn't unique, but ChrisTina was the first to report it to me, thereby allowing me to save all the funds from the deployed alpha version. While the contest rules do not care about the timing of the repost. I do. So I'll send ChrisTina an additional reward outside the competition.
+
+{Reactions}
+👍🏻 (7) 💜 (11) 
+
+[05/26/2023 07:36] 0xnevi
+Yea unfortunately code4rena awards unique findings instead of actual funds protected but its all part of an audit. Difficult to decide on a good reward system 😅. But thanks to the amazing sponsor @kronrod  you’ll be rewarded. Good job friend!
+
+{Reactions}
+hi5 (2) 
+
+[05/26/2023 07:46] christina0494
+Thank you that's amazing, very much appreciated!
+
+
+[05/26/2023 07:52] nobody2018
+I only got 260+ with 2H2M, take it easy, don’t worry. better next time.
+
+
+[05/26/2023 08:01] yellowbirby
+Easy, easy, catchy monkey. Each contest I double the score.
+
+
+[05/26/2023 08:30] bean.eth2
+respect for both parties
+
+
+[05/26/2023 08:48] mahdi9606
+Not bad
+
+
+[05/26/2023 13:20] jgcarv
+Where do I see the details of my findings?
+
+
+[05/26/2023 13:25] sockdrawermoney
+Congrats and great work
+
+
+[05/26/2023 13:52] fedebianu
+Will there be explanation for rejected findings?
+
+
+[05/26/2023 14:45] Hama#9496
+All glory to the god first paid repport after a long struggle in security domain
+
+
+[05/30/2023 09:48] foxb868
+The first time, it's a blessing. :C4Keycap:
+
+{Reactions}
+🎉 (9) 
+
+[05/31/2023 09:40] petrichor0961
+when u catch it without struggling  and its possible when u have a friend ... all he need just a cup of coffee
+
+
+[05/31/2023 09:41] petrichor0961
+🫡
+
+{Reactions}
+🔥 (3) 
+
+[06/13/2023 09:44] lirios.
+Reading this in the report after getting $45.58 for the finding  🤣
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2023 - frankencoin-apr12 [1095308824354758696].txt_Files/image-A777B.png
+
+{Reactions}
+😂 (13) 🔥 (3) 
+
+[06/13/2023 10:13] chaindev
+@0xA5DF , Can you check again my report 328?
+You marked it as duplicate of 437, but actually different.
+
+
+[06/13/2023 10:50] hermel007
+I think this was reported by 25 wardens, so the amount got split...
+
+
+[06/13/2023 10:55] hansfriese
+@anodaram Will you explain more about the issue 328? Especially why it can't be a duplicate of 437.
+
+
+[06/13/2023 12:16] sp1cymeatball
+Hey, at least you got a little extra for the chosen report 😎
+
+
+[07/16/2023 18:41] dwward3n
+Happy for you!
+Btw, can you get to know the exact reward per issue?
+
+
+[07/16/2023 19:02] lirios.
+https://code4rena.com/community-resources/findings.csv gives you rewards per finding
+
+
+[07/16/2023 19:15] dwward3n
+Wow thank you
+
+
+[07/16/2023 19:23] dwward3n
+That’s a hidden gem
+
+
+[07/16/2023 19:24] dwward3n
+Went through the doc, couldn’t find any more
+
+
+[07/16/2023 19:24] dwward3n
+What is the contest number of this?
+
+
+[07/16/2023 19:25] t1moh
+https://code4rena.com/community-resources/contests.csv
+
+{Reactions}
+🔆 
+
+==============================================================
+Exported 354 message(s)
+==============================================================
